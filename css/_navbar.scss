@@ -1,0 +1,36 @@
+// ── Block: navbar ─────────────────────────
+.navbar {
+  transition: $transition-base;
+  height: 72px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+  }
+  &-logo {
+    display: block;
+    width: 120px;
+    > img {
+      width: 100%;
+    }
+  }
+  // Theme: right side actions
+  &-action {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin: 0;
+    font-size: 13px;
+    color: $neural-1;
+    a {
+      color: $primary-1;
+    }
+  }
+  &.scrolldown {
+    background-color: #F8EBF3;
+  }
+}

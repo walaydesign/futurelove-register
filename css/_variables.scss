@@ -1,0 +1,99 @@
+// ──────────────────────────────────────────
+// Color System
+// ──────────────────────────────────────────
+$gradient: linear-gradient(to right, #ED5D7F 0%, #A263DF 100%);
+$white: #fff;
+$neural-1: #968AA7;
+$neural-2: #362D40;
+$neural-3: #EADDEF;
+$primary-1: #DC5589;
+$primary-2: #D4849B;
+$primary-3: #FDECF2;
+$highlight: #E6B082;
+$secondary-1: #9577CE;
+$secondary-2: #81579F;
+$gradient-1: linear-gradient(to bottom, #CCC2E7 0%, transparent 100%);
+$gradient-2: linear-gradient(to bottom, rgba(225,199,224,0.67) 0%, transparent 100%);
+$gradient-3: linear-gradient(to bottom, rgba(241,211,229,1) 0%, transparent 100%);
+$gradient-4: linear-gradient(45deg, rgba(227, 218, 207, 0.6) 0%, rgba(255, 255, 255, 0.6) 100%);
+$gradient-5: linear-gradient(to right, #DCBFA7 0%, #F6EBCF 33%, #FFF9E9 50%, #F8EDCF 67%, #DCBFA7 100%);
+$borwn-1: #54483A;
+$borwn-2: #7B5C30;
+$borwn-3: #C78A34;
+$borwn-4: #96805E;
+$borwn-5: #F0EBE0;
+$borwn-6: #7A4800;
+$gray: #EEEEEE;
+$shadow-1: 0 5px 20px rgba(0,0,0,0.15);
+$shadow-2: 0 4px 15px rgba(0,0,0,0.1);
+$shadow-3: 0 4px 10px rgba(153,133,94,0.16);
+$shadow-4: 0 4px 15px rgba(251,101,139,0.2);
+
+$pink-600: #C23D78;
+$pink-500: #D94D8A;
+$pink-400: #E8709E;
+$pink-300: #F0A0C0;
+$pink-200: #F8D0E6;
+$pink-100: #FCF0F7;
+$pink-50:  #FEF8FB;
+
+$purple-900: #2C1A3A;
+$purple-700: #5B3F78;
+$purple-500: #9B7EB8;
+$purple-300: #C8AADC;
+$purple-100: #F0E8F8;
+
+// ── Semantic Colors ───────────────────────
+$color-primary:        $pink-500;
+$color-primary-hover:  $pink-600;
+$color-primary-light:  $pink-200;
+$color-primary-bg:     $pink-50;
+
+$color-bg:             #EDE6F5;
+$color-bg-hero:        #EBE1F2;
+$color-bg-card:        #FFFFFF;
+$color-bg-input:       #FBF7FD;
+$color-bg-tag:         #F7F0FB;
+
+$color-border:         #E5D0F0;
+$color-border-input:   #DDD0EC;
+
+$color-text:           $purple-900;
+$color-text-sub:       $purple-700;
+$color-text-muted:     $purple-500;
+$color-text-light:     $purple-300;
+
+$color-white:          #FFFFFF;
+$color-star:           #FFB300;
+$color-line:           #06C755;
+$color-line-hover:     #05A847;
+$color-required:       #3DC28E;
+
+// ──────────────────────────────────────────
+// Typography
+// ──────────────────────────────────────────
+$font-base: 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif;
+$line-height-base:  1.65;
+$line-height-tight: 1.2;
+
+// ──────────────────────────────────────────
+// Border Radius
+// ──────────────────────────────────────────
+$r-sm:   6px;
+$r-md:   10px;
+$r-lg:   16px;
+$r-xl:   22px;
+$r-2xl:  32px;
+$r-full: 9999px;
+
+// ──────────────────────────────────────────
+// Shadows
+// ──────────────────────────────────────────
+$shadow-card:  0 8px 40px rgba(90, 50, 130, 0.12);
+$shadow-btn:   0 4px 16px rgba(217, 77, 138, 0.4);
+$shadow-input: inset 0 2px 6px rgba(0, 0, 0, 0.04);
+
+// ──────────────────────────────────────────
+// Transitions
+// ──────────────────────────────────────────
+$transition-base: all 0.3s ease;

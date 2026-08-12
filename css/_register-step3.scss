@@ -1,0 +1,120 @@
+// ── Block: task-card (Step 3 wrapper) ─────
+.task-card {
+  background: $color-bg-card;
+  border-radius: $r-xl;
+  padding: 32px 36px;
+  box-shadow: $shadow-card;
+  width: 100%;
+  max-width: 560px;
+}
+
+// ── Block: task-section ───────────────────
+.task-section {
+  margin-bottom: 24px;
+
+  // Theme: section header row
+  &-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 14px;
+  }
+
+  // Theme: section title
+  &-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: $color-text;
+    margin: 0;
+  }
+
+  // Theme: required/optional badge
+  &-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 2px 10px;
+    border-radius: $r-full;
+    font-size: 11px;
+    font-weight: 600;
+
+    // Modifier: required
+    &--required {
+      background: rgba(61, 194, 142, 0.12);
+      color: $color-required;
+    }
+
+    // Modifier: optional
+    &--optional {
+      background: rgba(155, 126, 184, 0.12);
+      color: $color-text-muted;
+    }
+  }
+
+  // Theme: section body
+  &-body {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  // Separator line between sections
+  &-divider {
+    height: 1px;
+    background: $color-border;
+    margin: 4px 0 24px;
+    opacity: 0.5;
+  }
+}
+
+// ── Block: interest-tags ──────────────────
+.interest-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+// ── Block: task-progress ──────────────────
+.task-progress {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: $pink-50;
+  border-radius: $r-lg;
+  padding: 12px 16px;
+  margin-top: 24px;
+  margin-bottom: 16px;
+
+  // Theme: progress label
+  &-label {
+    font-size: 13px;
+    color: $color-text-sub;
+
+    strong {
+      color: $color-primary;
+    }
+  }
+
+  // Theme: progress bar
+  &-bar {
+    flex: 1;
+    height: 6px;
+    background: $pink-200;
+    border-radius: $r-full;
+    margin: 0 12px;
+    overflow: hidden;
+
+    &-fill {
+      height: 100%;
+      background: linear-gradient(90deg, $pink-500, $pink-400);
+      border-radius: $r-full;
+      transition: width 0.4s ease;
+    }
+  }
+
+  // Theme: percentage text
+  &-pct {
+    font-size: 13px;
+    font-weight: 700;
+    color: $color-primary;
+  }
+}

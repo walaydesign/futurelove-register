@@ -1,0 +1,94 @@
+// ── Block: register-layout ────────────────
+.register-layout {
+  padding: 24px 0 40px;
+  background-image: url(../assets/houses.png);
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+  .container {
+    display: flex;
+    max-width: 1140px;
+  }
+  @media screen and (max-width: 767px) {
+    .container {
+      flex-direction: column;
+    }
+  }
+}
+
+.deco {
+  position: absolute;
+  filter: drop-shadow(0 4px 15px rgba(0, 0, 0, 0.1))
+  &-1 {
+    width: 8.54%;
+    top: 8.13vw;
+    left: 2.36vw;
+  }
+  &-2 {
+    width: 6.43%;
+    top: 29.44vw;
+    left: 5vw;
+  }
+  &-3 {
+    width: 8.54%;
+    top: 51.81vw;
+    left: 3.06vw;
+  }
+  &-4 {
+    width: 5.69%;
+    top: 9.17vw;
+    right: 4.58vw;
+  }
+  &-5 {
+    width: 7.36%;
+    top: 23.61vw;
+    right: 9.51vw;
+  }
+  &-6 {
+    width: 9.38%;
+    top: 41.88vw;
+    right: -1.18vw;
+  }
+  @media screen and (max-width: 767px) {
+    display: none;
+      &-1 {
+    width: 24%;
+  }
+  &-2 {
+    width: 18%;
+  }
+  &-3 {
+    width: 24%;
+  }
+  &-4 {
+    width: 15%;
+  }
+  &-5 {
+    width: 21%;
+  }
+  &-6 {
+    width: 27%;
+  }
+  }
+}
+
+// ── Block: register-hero (left panel) ─────
+.register-hero {
+  width: 55%;
+  padding-right: 60px;
+  @media screen and (max-width: 767px) {
+    width: 100%;
+    padding: 0;
+    margin-bottom: 40px;
+  }
+}
+
+// ── Block: register-panel (right panel) ───
+.register-panel {
+  width: 45%;
+  @media screen and (max-width: 767px) {
+    width: 100%;
+  }
+}

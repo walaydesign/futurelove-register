@@ -1,0 +1,241 @@
+// ── Block: preference (Step 2) ────────────
+.preference-card {
+  background: $color-bg-card;
+  border-radius: $r-xl;
+  padding: 32px 36px;
+  box-shadow: $shadow-card;
+  width: 100%;
+  max-width: 460px;
+
+  // Theme: card header
+  &-header {
+    margin-bottom: 20px;
+  }
+
+  &-title {
+    font-size: 22px;
+    font-weight: 800;
+    color: $color-text;
+    margin-bottom: 6px;
+  }
+
+  &-desc {
+    font-size: 13px;
+    color: $color-text-muted;
+  }
+}
+
+// ── Block: preference-tabs ────────────────
+.preference-tabs {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 22px;
+  background: $color-bg-input;
+  border-radius: $r-full;
+  padding: 4px;
+
+  // Theme: single tab button
+  &-item {
+    flex: 1;
+    text-align: center;
+    padding: 8px 16px;
+    border-radius: $r-full;
+    font-size: 13px;
+    font-weight: 600;
+    color: $color-text-muted;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    font-family: $font-base;
+    transition: $transition-base;
+
+    // Modifier: active tab
+    &--active {
+      background: $color-white;
+      color: $color-primary;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    }
+
+    &:hover:not(.preference-tabs-item--active) {
+      color: $color-text-sub;
+    }
+  }
+}
+
+// ── Block: preference-options ─────────────
+.preference-options {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-bottom: 20px;
+
+  // Theme: option card
+  &-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 16px 10px;
+    background: $color-bg-input;
+    border: 2px solid $color-border;
+    border-radius: $r-lg;
+    cursor: pointer;
+    transition: $transition-base;
+    font-family: $font-base;
+    min-height: 90px;
+
+    &:hover {
+      border-color: $pink-300;
+      background: $pink-50;
+    }
+
+    // Modifier: selected
+    &--selected {
+      border-color: $color-primary;
+      background: $pink-100;
+    }
+
+    // Theme: icon inside option
+    &-icon {
+      font-size: 28px;
+      line-height: 1;
+    }
+
+    // Theme: label inside option
+    &-label {
+      font-size: 13px;
+      font-weight: 600;
+      color: $color-text-sub;
+    }
+  }
+}
+
+// ── Block: pairing (matching screens) ─────
+.pairing {
+  background: $color-bg-card;
+  border-radius: $r-xl;
+  padding: 40px 36px;
+  box-shadow: $shadow-card;
+  width: 100%;
+  max-width: 460px;
+  text-align: center;
+
+  // Theme: avatar display
+  &-avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, $pink-200, $purple-300);
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 52px;
+    overflow: hidden;
+    border: 4px solid $color-white;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+
+    // Modifier: searching pulse animation
+    &--searching {
+      animation: pulsePink 2s ease-in-out infinite;
+    }
+  }
+
+  // Theme: avatar group (two avatars for success)
+  &-avatar-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: -20px;
+    margin: 0 auto 20px;
+    position: relative;
+
+    .pairing-avatar {
+      width: 90px;
+      height: 90px;
+      font-size: 38px;
+
+      &:last-child {
+        margin-left: -20px;
+      }
+    }
+
+    .pairing-heart {
+      position: absolute;
+      bottom: -4px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 20px;
+      color: $color-primary;
+      background: $color-white;
+      border-radius: 50%;
+      width: 28px;
+      height: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  // Theme: status title
+  &-title {
+    font-size: 20px;
+    font-weight: 800;
+    color: $color-text;
+    margin-bottom: 8px;
+  }
+
+  // Theme: status subtitle
+  &-desc {
+    font-size: 13px;
+    color: $color-text-muted;
+    margin-bottom: 24px;
+  }
+
+  // Theme: match info chip (name tag)
+  &-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: $pink-100;
+    color: $color-primary;
+    border-radius: $r-full;
+    padding: 5px 14px;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 24px;
+  }
+
+  // Theme: searching dots loader
+  &-dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 24px;
+
+    span {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: $pink-300;
+      animation: dotBounce 1.4s ease-in-out infinite;
+
+      &:nth-child(2) { animation-delay: 0.2s; }
+      &:nth-child(3) { animation-delay: 0.4s; }
+    }
+  }
+}
+
+// ── Animations ────────────────────────────
+@keyframes pulsePink {
+  0%, 100% { box-shadow: 0 4px 20px rgba(0,0,0,0.1), 0 0 0 0 rgba(217,77,138,0.3); }
+  50%       { box-shadow: 0 4px 20px rgba(0,0,0,0.1), 0 0 0 16px rgba(217,77,138,0); }
+}
+
+@keyframes dotBounce {
+  0%, 80%, 100% { transform: scale(0.7); opacity: 0.5; }
+  40%           { transform: scale(1.1); opacity: 1; }
+}

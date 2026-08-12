@@ -1,0 +1,219 @@
+// ── Block: form ───────────────────────────
+.form {
+  // Theme: form group wrapper
+  &-group {
+    margin-bottom: 18px;
+
+    // Modifier: inline (phone + verify button)
+    &--inline {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+
+    // Modifier: hidden (conditionally revealed fields)
+    &--hidden {
+      display: none;
+    }
+
+    // Modifier: slide-in reveal animation
+    &--reveal {
+      animation: slideDown 0.3s ease forwards;
+    }
+  }
+
+  // Theme: form label
+  &-label {
+    display: block;
+    font-size: 12px;
+    color: $neural-1;
+    margin-bottom: 8px;
+    >span {
+      color: $primary-1;
+      margin-left: 4px;
+    }
+  }
+
+  // Theme: text / date / select input
+  &-input {
+    width: 100%;
+    padding: 15px;
+    background-color: $primary-3;
+    border: 1px solid #EEEEEE;
+    border-radius: 16px;
+    font-size: 14px;
+    color: $neural-2;
+    outline: none;
+    transition: $transition-base;
+    box-shadow: $shadow-input;
+    appearance: none;
+    -webkit-appearance: none;
+
+    &::placeholder {
+      color: #B79EA7;
+    }
+
+    &:focus {
+      border-color: $pink-300;
+      background-color: $color-white;
+      box-shadow: 0 0 0 3px rgba(217, 77, 138, 0.1);
+    }
+
+    // Modifier: error state
+    &--error {
+      border-color: #E55555;
+
+      &:focus {
+        box-shadow: 0 0 0 3px rgba(229, 85, 85, 0.15);
+      }
+    }
+  }
+
+  // Theme: native select override
+  &-select {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%239B7EB8' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+    padding-right: 36px;
+    cursor: pointer;
+  }
+
+  // Theme: checkbox custom style
+  &-check {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    margin-bottom: 18px;
+
+    &-input {
+      width: 16px;
+      height: 16px;
+      flex-shrink: 0;
+      margin-top: 2px;
+      accent-color: $color-primary;
+      cursor: pointer;
+    }
+
+    &-label {
+      font-size: 12px;
+      color: $neural-2;
+      line-height: 1.6;
+      cursor: pointer;
+
+      a {
+        color: $color-primary;
+        font-weight: 600;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  &-remark {
+    text-align: center;
+    margin-top: 12px;
+    margin-bottom: 0;
+    font-size: 11px;
+    color: $neural-1;
+  }
+
+  // Theme: inline pair row (height + birthday)
+  &-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  // Theme: error message
+  &-error {
+    font-size: 11px;
+    color: #E55555;
+    margin-top: 4px;
+  }
+
+  // Theme: helper text
+  &-hint {
+    font-size: 11px;
+    color: $color-text-muted;
+    margin-top: 4px;
+  }
+
+  &-coupon {
+    &-head {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      width: 100%;
+      background-color: transparent;
+      padding: 0;
+      border: 0;
+      cursor: pointer;
+      p {
+        font-size: 13px;
+        font-weight: 700;
+        margin: 0;
+        color: $secondary-2;
+        flex: 1;
+        text-align: left;
+      }
+      &.active {
+        .form-coupon-arrow {
+          transform: rotate(180deg);
+        }
+      }
+    }
+    &-icon {
+      width: 16px;
+    }
+    &-arrow {
+      width: 16px;
+      transition: $transition-base;
+    }
+    .form-group {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s ease, padding 0.35s ease, margin-top 0.35s ease;
+      padding: 0;
+      border-radius: 20px;
+      border: 1.5px solid transparent;
+      margin-top: 0;
+
+      &.is-open {
+        max-height: 300px;
+        padding: 20px;
+        border-color: $gray;
+        margin-top: 12px;
+      }
+      >span {
+        font-size: 12px;
+        margin-top: 8px;
+        display: block;
+        color: $neural-1;
+        .highlight {
+          color: $primary-1;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+}
+
+// Textarea variant
+textarea.form-input {
+  resize: vertical;
+  min-height: 80px;
+  line-height: 1.6;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

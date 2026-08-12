@@ -1,0 +1,142 @@
+// ── Block: success-card ───────────────────
+.success-card {
+  background: $color-bg-card;
+  border-radius: $r-xl;
+  padding: 40px 40px 36px;
+  box-shadow: $shadow-card;
+  width: 100%;
+  max-width: 460px;
+  text-align: center;
+
+  // Theme: header area
+  &-header {
+    margin-bottom: 24px;
+
+    .success-icon {
+      font-size: 48px;
+      display: block;
+      margin-bottom: 12px;
+    }
+  }
+
+  &-title {
+    font-size: 24px;
+    font-weight: 900;
+    color: $color-text;
+    margin-bottom: 8px;
+  }
+
+  &-subtitle {
+    font-size: 13px;
+    color: $color-text-muted;
+    line-height: 1.7;
+  }
+}
+
+// ── Block: voucher ────────────────────────
+.voucher {
+  background: linear-gradient(135deg, $pink-500, $pink-400);
+  border-radius: $r-xl;
+  padding: 28px 24px;
+  margin: 0 auto 24px;
+  position: relative;
+  overflow: hidden;
+  color: $color-white;
+
+  // decorative notches (perforation effect)
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    background: $color-bg;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &::before { left: -12px; }
+  &::after  { right: -12px; }
+
+  // dashed inner line
+  .voucher-line {
+    border-top: 2px dashed rgba(255, 255, 255, 0.4);
+    margin: 14px 0;
+  }
+
+  // Theme: amount display
+  &-amount {
+    font-size: 56px;
+    font-weight: 900;
+    line-height: 1;
+    margin-bottom: 4px;
+
+    span {
+      font-size: 24px;
+      font-weight: 700;
+      vertical-align: middle;
+      margin-right: 2px;
+    }
+  }
+
+  // Theme: label below amount
+  &-label {
+    font-size: 14px;
+    opacity: 0.9;
+    font-weight: 500;
+  }
+
+  // Theme: expiry info
+  &-expiry {
+    font-size: 11px;
+    opacity: 0.75;
+    margin-top: 12px;
+  }
+}
+
+// ── Block: success-actions ────────────────
+.success-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  &-line {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 24px;
+    border-radius: $r-full;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: $font-base;
+    background: $color-line;
+    color: $color-white;
+    border: none;
+    cursor: pointer;
+    transition: $transition-base;
+    text-decoration: none;
+    width: 100%;
+
+    &:hover {
+      background: $color-line-hover;
+      color: $color-white;
+      transform: translateY(-1px);
+    }
+  }
+}
+
+// ── Block: success-share ──────────────────
+.success-share {
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid $color-border;
+  font-size: 12px;
+  color: $color-text-muted;
+
+  a {
+    color: $color-primary;
+    font-weight: 600;
+  }
+}

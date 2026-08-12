@@ -1,0 +1,178 @@
+// ── Block: btn-social ─────────────────────
+.btn-social {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 16px 20px;
+  border-radius: $r-full;
+  font-size: 16px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  transition: $transition-base;
+  text-decoration: none;
+  >img {
+    width: 18px;
+  }
+
+  // Modifier: LINE
+  &--line {
+    color: $color-white;
+    background: linear-gradient(to right, #67CC92 0%, #B1D17D 100%);
+
+    &:hover {
+      background-color: $color-line-hover;
+      color: $color-white;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(6, 199, 85, 0.35);
+    }
+
+    &:active {
+      transform: translateY(0);
+    }
+  }
+
+  // Modifier: Google
+  &--google {
+    background-color: $color-white;
+    color: $color-text;
+    border: 1.5px solid $color-border;
+
+    &:hover {
+      background-color: $color-bg;
+      border-color: $color-primary-light;
+      transform: translateY(-1px);
+    }
+  }
+}
+
+// ── Block: btn-cta ────────────────────────
+.btn-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 14px 24px;
+  border-radius: $r-full;
+  font-size: 15px;
+  font-weight: 700;
+  font-family: $font-base;
+  border: none;
+  cursor: pointer;
+  transition: $transition-base;
+  text-decoration: none;
+
+  // Modifier: primary (pink gradient)
+  &--primary {
+    background: $gradient;  
+    color: $color-white;
+    box-shadow: $shadow-btn;
+    >img {
+      width: 16px;
+    }
+
+    &:hover {
+      background: linear-gradient(135deg, $pink-600, $pink-500);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(217, 77, 138, 0.5);
+      color: $color-white;
+    }
+
+    &:active {
+      transform: translateY(0);
+      box-shadow: $shadow-btn;
+    }
+
+    &:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+      transform: none;
+    }
+  }
+
+  // Modifier: outline
+  &--outline {
+    background: transparent;
+    color: $color-primary;
+    border: 2px solid $color-primary;
+
+    &:hover {
+      background: $pink-50;
+      color: $color-primary-hover;
+    }
+  }
+}
+
+// ── Block: btn-verify ─────────────────────
+.btn-verify {
+  flex-shrink: 0;
+  padding: 12px;
+  color: $color-primary;
+  background-color: transparent;
+  border: 1.5px solid $primary-1;
+  font-size: 12px;
+  font-weight: 600;
+  font-family: $font-base;
+  cursor: pointer;
+  transition: $transition-base;
+  white-space: nowrap;
+  height: 55px;
+  border-radius: 16px;
+
+  &:hover {
+    background-color: $pink-200;
+    border-color: $pink-300;
+  }
+}
+
+// ── Block: btn-back ───────────────────────
+.btn-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: $color-text-muted;
+  font-size: 13px;
+  font-weight: 500;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font-family: $font-base;
+  transition: $transition-base;
+  text-decoration: none;
+
+  &:hover {
+    color: $color-primary;
+  }
+}
+
+// ── Block: btn-tag ────────────────────────
+.btn-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 16px;
+  border-radius: $r-full;
+  font-size: 13px;
+  font-weight: 500;
+  font-family: $font-base;
+  background-color: $color-bg-tag;
+  color: $color-text-sub;
+  border: 1.5px solid $color-border;
+  cursor: pointer;
+  transition: $transition-base;
+
+  &:hover {
+    border-color: $color-primary-light;
+    color: $color-primary;
+  }
+
+  // Modifier: selected state
+  &--selected {
+    background-color: $pink-100;
+    color: $color-primary;
+    border-color: $color-primary-light;
+    font-weight: 600;
+  }
+}

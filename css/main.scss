@@ -1,0 +1,29 @@
+// ══════════════════════════════════════════
+// 戀戀未來 - Register Flow
+// BTM (Block-Theme-Modifier) Naming Convention
+//
+// Compile:  sass scss/main.scss css/style.css
+// Watch:    sass scss/main.scss css/style.css --watch
+// ══════════════════════════════════════════
+
+// 1. Variables (design tokens)
+@import 'variables';
+
+// 2. Base & reset
+@import 'base';
+
+// 3. Layout
+@import 'layout';
+
+// 4. Components
+@import 'navbar';
+@import 'hero';
+@import 'btn';
+@import 'form';
+@import 'step-indicator';
+
+// 5. Pages
+@import 'register-step1';
+@import 'register-step2';
+@import 'register-step3';
+@import 'register-success';

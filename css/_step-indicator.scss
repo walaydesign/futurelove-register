@@ -1,0 +1,90 @@
+// ── Block: step-indicator ─────────────────
+.step-indicator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 28px;
+  gap: 0;
+
+  // Theme: single step item
+  &-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    flex: 1;
+
+    // connector line between steps
+    &:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      top: 16px;
+      left: 50%;
+      width: 100%;
+      height: 2px;
+      background-color: $color-border;
+      z-index: 0;
+      transform: translateX(0);
+    }
+
+    // Modifier: completed step
+    &--done {
+      .step-indicator-circle {
+        background: $color-primary;
+        border-color: $color-primary;
+        color: $color-white;
+      }
+
+      .step-indicator-label {
+        color: $color-primary;
+      }
+
+      &::after {
+        background: $color-primary;
+      }
+    }
+
+    // Modifier: current/active step
+    &--active {
+      .step-indicator-circle {
+        background: $color-white;
+        border-color: $color-primary;
+        color: $color-primary;
+        box-shadow: 0 0 0 4px rgba(217, 77, 138, 0.15);
+      }
+
+      .step-indicator-label {
+        color: $color-primary;
+        font-weight: 700;
+      }
+    }
+  }
+
+  // Theme: numbered circle
+  &-circle {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 2px solid $color-border;
+    background: $color-white;
+    color: $color-text-muted;
+    font-size: 13px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+    transition: $transition-base;
+    margin-bottom: 6px;
+  }
+
+  // Theme: step label text
+  &-label {
+    font-size: 11px;
+    font-weight: 500;
+    color: $color-text-muted;
+    white-space: nowrap;
+    transition: $transition-base;
+  }
+}
