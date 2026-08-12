@@ -1,295 +1,533 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-TW">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>建立檔案 - 戀戀未來</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;900&display=swap" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>建立檔案 - 戀戀未來</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link href="css/main.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- ── Navbar ── -->
+    <nav class="navbar">
+      <div class="container">
+        <a class="navbar-logo" href="#">
+          <img src="./assets/logo.png" alt="" />
+        </a>
+        <p class="navbar-action">已有帳號？<a href="" class="">直接登入</a></p>
+      </div>
+    </nav>
 
-  <!-- ── Navbar ── -->
-  <nav class="navbar">
-    <a class="navbar-brand-logo" href="index.html">
-      <i class="bi bi-hearts brand-heart"></i>
-      <span class="brand-text">戀戀</span>
-      <span class="brand-text-suffix">未來</span>
-    </a>
-    <div class="navbar-actions">
-      <a href="#" class="navbar-link">登入</a>
-      <span class="navbar-divider">|</span>
-      <a href="#" class="navbar-link">客服</a>
-    </div>
-  </nav>
+    <!-- ── Main Layout ── -->
+    <main class="register-layout">
+      <div class="container">
+        <!-- Left: Hero Panel -->
+        <aside class="register-hero">
+          <div class="hero">
+            <!-- Platform badge -->
+            <span class="hero-badge">全台最大緣分配對平台</span>
 
-  <!-- ── Main Layout ── -->
-  <main class="register-layout">
+            <!-- Main heading -->
+            <h1 class="hero-title">解鎖幸福<br />就差這一步</h1>
 
-    <!-- Left: Hero Panel -->
-    <aside class="register-hero">
-      <span class="hero-deco-dot hero-deco-dot--md hero-deco-dot--pos1"></span>
-      <span class="hero-deco-dot hero-deco-dot--sm hero-deco-dot--pos2"></span>
-      <span class="hero-deco-dot hero-deco-dot--lg hero-deco-dot--pos3"></span>
-      <span class="hero-deco-dot hero-deco-dot--sm hero-deco-dot--pos4"></span>
-      <span class="hero-deco-dot hero-deco-dot--md hero-deco-dot--pos5"></span>
+            <!-- Description -->
+            <p class="hero-desc">
+              不用等待命運，讓科技為你找到靈魂伴侶。立即加入，免費獲取<span
+                class="highlight"
+              >
+                500 元</span
+              >
+              點數，和心動對象展開全新的緣分旅程。
+            </p>
 
-      <div class="hero">
-        <span class="hero-badge">全臺最大約會軟體平台</span>
-        <h1 class="hero-title">解鎖幸福<br>就差這一步</h1>
-        <p class="hero-desc">
-          不管你是忙碌、沒時間為自己進行感情社交，立即加入，每月實境 <strong>500 元</strong>折扣，和心儀對象很容易見到約會的感情旅程
-        </p>
-        <div class="hero-stats">
-          <div class="hero-stat">
-            <i class="bi bi-people-fill hero-stat-icon"></i>
-            <span class="hero-stat-number">10萬+</span>
-            <span class="hero-stat-label">會員</span>
-          </div>
-          <div class="hero-stat">
-            <i class="bi bi-heart-fill hero-stat-icon"></i>
-            <span class="hero-stat-number">13,900+</span>
-          </div>
-        </div>
-        <div class="hero-benefits">
-          <div class="hero-benefit">
-            <span class="hero-benefit-icon">🛡️</span>
-            <div class="hero-benefit-title">3億媒合成功</div>
-            <div class="hero-benefit-desc">帶你找到命定對象</div>
-          </div>
-          <div class="hero-benefit">
-            <span class="hero-benefit-icon">🎁</span>
-            <div class="hero-benefit-title">免費使用</div>
-            <div class="hero-benefit-desc">500元抵用金，直接折抵消費</div>
-          </div>
-          <div class="hero-benefit">
-            <span class="hero-benefit-icon">🔒</span>
-            <div class="hero-benefit-title">安全享受</div>
-            <div class="hero-benefit-desc">保密你的身份，安全聯繫</div>
-          </div>
-        </div>
-        <div class="hero-rating">
-          <div class="hero-rating-avatars">
-            <div class="avatar-thumb">😊</div>
-            <div class="avatar-thumb">😄</div>
-            <div class="avatar-thumb">🥰</div>
-          </div>
-          <div>
-            <div class="hero-rating-stars">
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill"></i>
+            <!-- Stats -->
+            <div class="hero-stats">
+              <div class="hero-stat hero-stat-primary">
+                <div class="hero-stat-icon">
+                  <img src="./assets/people.svg" alt="" />
+                </div>
+                <div class="d-flex align-items-end gap-1">
+                  <span class="hero-stat-number">10萬+</span>
+                  <span class="hero-stat-label">緣分</span>
+                </div>
+              </div>
+              <div class="hero-stat hero-stat-secondary">
+                <div class="hero-stat-icon">
+                  <img src="./assets/people.svg" alt="" />
+                </div>
+                <div class="d-flex align-items-end gap-1">
+                  <span class="hero-stat-number">13,900+</span>
+                  <span class="hero-stat-label">對</span>
+                </div>
+              </div>
             </div>
-            <div class="hero-rating-info-title">全台最好評</div>
-            <div class="hero-rating-info-desc">全台 10 萬人選擇</div>
-          </div>
-        </div>
-      </div>
-    </aside>
 
-    <!-- Right: Step 2 Preference Card -->
-    <section class="register-panel">
-
-      <!-- ── State 1: Preference selection ── -->
-      <div class="preference-card" id="statePreference">
-
-        <!-- Back -->
-        <a href="index.html" class="btn-back mb-3">
-          <i class="bi bi-arrow-left"></i> 返回
-        </a>
-
-        <!-- Step indicator -->
-        <div class="step-indicator">
-          <div class="step-indicator-item step-indicator-item--done">
-            <div class="step-indicator-circle">
-              <i class="bi bi-check-lg" style="font-size:13px;"></i>
+            <!-- Benefits -->
+            <div class="hero-benefits">
+              <div class="row">
+                <div class="col-4">
+                  <div class="hero-benefit">
+                    <img
+                      class="hero-benefit-icon"
+                      src="./assets/light.svg"
+                      alt=""
+                    />
+                    <h2 class="hero-benefit-title">3 秒極速註冊</h2>
+                    <p class="hero-benefit-desc">
+                      LINE 一鍵授權<br />無需繁瑣填寫
+                    </p>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="hero-benefit">
+                    <img
+                      class="hero-benefit-icon"
+                      src="./assets/gift.svg"
+                      alt=""
+                    />
+                    <h2 class="hero-benefit-title">免費獲取 500 元點數</h2>
+                    <p class="hero-benefit-desc">
+                      可折抵線上塔羅占卜<br />與生命靈數解析
+                    </p>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="hero-benefit">
+                    <img
+                      class="hero-benefit-icon"
+                      src="./assets/safe.svg"
+                      alt=""
+                    />
+                    <h2 class="hero-benefit-title">身分安全認證機制</h2>
+                    <p class="hero-benefit-desc">
+                      實名驗證<br />保障每一段緣分的真實
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
-            <span class="step-indicator-label">驗證</span>
+
+            <!-- Rating -->
+            <div class="hero-rating">
+              <h3>全台好評</h3>
+              <div class="hero-rating-wrapper">
+                <div class="hero-rating-item">
+                  <div class="hero-rating-avatars">
+                    <div class="hero-rating-avatar">
+                      <img src="./assets/avatar-1.jpg" alt="" />
+                    </div>
+                    <div class="hero-rating-avatar">
+                      <img src="./assets/avatar-2.jpg" alt="" />
+                    </div>
+                  </div>
+                  <div class="hero-rating-inner">
+                    <div class="hero-rating-stars">
+                      <img src="./assets/star.svg" alt="" />
+                      <img src="./assets/star.svg" alt="" />
+                      <img src="./assets/star.svg" alt="" />
+                      <img src="./assets/star.svg" alt="" />
+                      <img src="./assets/star.svg" alt="" />
+                    </div>
+                    <p>非常非常準確！</p>
+                  </div>
+                </div>
+                <div class="hero-rating-item">
+                  <div class="hero-rating-avatars">
+                    <div class="hero-rating-avatar">
+                      <img src="./assets/avatar-3.jpg" alt="" />
+                    </div>
+                    <div class="hero-rating-avatar">
+                      <img src="./assets/avatar-4.jpg" alt="" />
+                    </div>
+                  </div>
+                  <div class="hero-rating-inner">
+                    <div class="hero-rating-stars">
+                      <img src="./assets/star.svg" alt="" />
+                      <img src="./assets/star.svg" alt="" />
+                      <img src="./assets/star.svg" alt="" />
+                      <img src="./assets/star.svg" alt="" />
+                      <img src="./assets/star.svg" alt="" />
+                    </div>
+                    <p>認識了很多新朋友</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="step-indicator-item step-indicator-item--active">
-            <div class="step-indicator-circle">2</div>
-            <span class="step-indicator-label">建立檔案</span>
+        </aside>
+
+        <!-- Right: Step 2 Preference Card -->
+        <section class="register-panel">
+          <!-- ── State 1: Preference selection ── -->
+          <div class="register-card">
+            <div class="register-step">
+              <div class="row">
+                <div class="col-4">
+                  <a href="index.html" class="register-step-item">
+                    <span>1</span>
+                    <p>驗證</p>
+                  </a>
+                </div>
+                <div class="col-4">
+                  <a href="" class="register-step-item active">
+                    <span>2</span>
+                    <p>建立檔案</p>
+                  </a>
+                </div>
+                <div class="col-4">
+                  <a href="" class="register-step-item">
+                    <span>3</span>
+                    <p>任務牆</p>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="register-card-body">
+              <div class="register-card-header">
+                <h2 class="register-card-title">你希望陪伴你的她是？</h2>
+                <p class="register-card-subtitle">
+                  選擇心動類型，讓系統為你精準配對
+                </p>
+              </div>
+              <!-- Gender tabs -->
+              <div class="form-group">
+                <label class="form-label" for="phone"
+                  >您的性別<span>*</span></label
+                >
+                <div class="preference-tabs">
+                  <div class="row">
+                    <div class="col-6">
+                      <button
+                        class="preference-tabs-item preference-tabs-item--active"
+                        type="button"
+                      >
+                        <svg
+                          width="18"
+                          height="18"
+                          viewBox="0 0 18 18"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M9 11.25V16.5"
+                            stroke="#DC5589"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                          <path
+                            d="M6.75 14.25H11.25"
+                            stroke="#DC5589"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                          <path
+                            d="M9 11.25C11.4853 11.25 13.5 9.23528 13.5 6.75C13.5 4.26472 11.4853 2.25 9 2.25C6.51472 2.25 4.5 4.26472 4.5 6.75C4.5 9.23528 6.51472 11.25 9 11.25Z"
+                            stroke="#DC5589"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                        <span>女生</span>
+                      </button>
+                    </div>
+                    <div class="col-6">
+                      <button class="preference-tabs-item" type="button">
+                        <svg
+                          width="18"
+                          height="18"
+                          viewBox="0 0 18 18"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M12 2.25H15.75V6"
+                            stroke="#968AA7"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                          <path
+                            d="M15.75 2.25L10.6875 7.3125"
+                            stroke="#968AA7"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                          <path
+                            d="M7.5 15C9.98528 15 12 12.9853 12 10.5C12 8.01472 9.98528 6 7.5 6C5.01472 6 3 8.01472 3 10.5C3 12.9853 5.01472 15 7.5 15Z"
+                            stroke="#968AA7"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                        <span>男生</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Personality options -->
+              <div class="form-group">
+                <label class="form-label" for="phone"
+                  >理想伴侶型<span>*</span></label
+                >
+                <div class="preference-options">
+                  <div class="row">
+                    <div class="col-6">
+                      <button class="preference-options-item" type="button">
+                        <img class="preference-options-item-icon" src="./assets/hat.png" alt="">
+                        <span class="preference-options-item-label"
+                          >優雅青叔</span
+                        >
+                        <span class="preference-options-item-desc"
+                          >沉穩成熟·有品味</span
+                        >
+                      </button>
+                    </div>
+                    <div class="col-6">
+                      <button class="preference-options-item" type="button">
+                        <img class="preference-options-item-icon" src="./assets/sun.png" alt="">
+                        <span class="preference-options-item-label"
+                          >陽光鄰家</span
+                        >
+                        <span class="preference-options-item-desc"
+                          >開朗活潑·暖男</span
+                        >
+                      </button>
+                    </div>
+                    <div class="col-6">
+                      <button class="preference-options-item" type="button">
+                        <img class="preference-options-item-icon" src="./assets/wolf.png" alt="">
+                        <span class="preference-options-item-label"
+                          >霸道狼狗</span
+                        >
+                        <span class="preference-options-item-desc"
+                          >強勢主動·有型</span
+                        >
+                      </button>
+                    </div>
+                    <div class="col-6">
+                      <button class="preference-options-item" type="button">
+                        <img class="preference-options-item-icon" src="./assets/dog.png" alt="">
+                        <span class="preference-options-item-label"
+                          >溫柔奶狗</span
+                        >
+                        <span class="preference-options-item-desc"
+                          >體貼溫和·黏人</span
+                        >
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 暱稱 -->
+              <div class="form-group">
+                <label class="form-label" for="nickname"
+                  >暱稱<span>*</span></label
+                >
+                <input
+                  type="emial"
+                  class="form-input"
+                  id="nickname"
+                  required
+                  placeholder="讓對方怎麼稱呼你？"
+                />
+                <p class="form-remark text-start">可使用英文名或任意名稱，保護真實身份</p>
+              </div>
+              <!-- Submit -->
+              <button
+                class="btn-cta btn-cta--primary mt-2"
+                onclick="showPairing(1)"
+              >
+                立即配對，找到心動對象<img
+                  src="./assets/arrow-right.svg"
+                  alt=""
+                />
+              </button>
+
+              <a href="./index.html" class="btn-back">← 返回上一步</a>
+            </div>
+            <!-- Card footer -->
+            <div class="register-card-footer">
+              <span>身分證驗證可稍後完成 ·</span>
+              <a href="#">客服支援 </a>
+              <span class="separator">·</span>
+              <span>©2026 戀戀未來</span>
+            </div>
           </div>
-          <div class="step-indicator-item">
-            <div class="step-indicator-circle">3</div>
-            <span class="step-indicator-label">任務牆</span>
+
+          <!-- ── State 2: Searching / Matching ── -->
+          <div class="pairing d-none" id="statePairing1">
+            <a
+              href="#"
+              class="btn-back mb-3"
+              onclick="
+                showPreference();
+                return false;
+              "
+            >
+              <i class="bi bi-arrow-left"></i> 返回
+            </a>
+
+            <div class="step-indicator">
+              <div class="step-indicator-item step-indicator-item--done">
+                <div class="step-indicator-circle">
+                  <i class="bi bi-check-lg" style="font-size: 13px"></i>
+                </div>
+                <span class="step-indicator-label">驗證</span>
+              </div>
+              <div class="step-indicator-item step-indicator-item--active">
+                <div class="step-indicator-circle">2</div>
+                <span class="step-indicator-label">建立檔案</span>
+              </div>
+              <div class="step-indicator-item">
+                <div class="step-indicator-circle">3</div>
+                <span class="step-indicator-label">任務牆</span>
+              </div>
+            </div>
+
+            <div class="pairing-avatar pairing-avatar--searching">👤</div>
+            <h3 class="pairing-title">心動配對中</h3>
+            <div class="pairing-dots">
+              <span></span><span></span><span></span>
+            </div>
+            <p class="pairing-desc">
+              正在為你尋找最適合的對象<br />請稍候片刻...
+            </p>
+            <button class="btn-cta btn-cta--primary" onclick="showPairing(2)">
+              已找到配對 →
+            </button>
           </div>
-        </div>
 
-        <!-- Card header -->
-        <div class="preference-card-header">
-          <h2 class="preference-card-title">你希望陪伴你的她是？</h2>
-          <p class="preference-card-desc">你對什麼類型的人感到心動呢？</p>
-        </div>
+          <!-- ── State 3: Match Found ── -->
+          <div class="pairing d-none" id="statePairing2">
+            <div class="step-indicator">
+              <div class="step-indicator-item step-indicator-item--done">
+                <div class="step-indicator-circle">
+                  <i class="bi bi-check-lg" style="font-size: 13px"></i>
+                </div>
+                <span class="step-indicator-label">驗證</span>
+              </div>
+              <div class="step-indicator-item step-indicator-item--active">
+                <div class="step-indicator-circle">2</div>
+                <span class="step-indicator-label">建立檔案</span>
+              </div>
+              <div class="step-indicator-item">
+                <div class="step-indicator-circle">3</div>
+                <span class="step-indicator-label">任務牆</span>
+              </div>
+            </div>
 
-        <!-- Gender tabs -->
-        <div class="preference-tabs">
-          <button class="preference-tabs-item preference-tabs-item--active" type="button">女生</button>
-          <button class="preference-tabs-item" type="button">男生</button>
-          <button class="preference-tabs-item" type="button">不限</button>
-        </div>
+            <div class="pairing-avatar">🧑</div>
+            <h3 class="pairing-title">已配到人選！</h3>
+            <p class="pairing-desc">找到你的心動對象了</p>
+            <div class="pairing-tag">
+              <i class="bi bi-person-fill"></i> 朱粉妝
+            </div>
+            <button class="btn-cta btn-cta--primary" onclick="showPairing(3)">
+              查看配對 →
+            </button>
+          </div>
 
-        <!-- Personality options -->
-        <div class="preference-options">
-          <button class="preference-options-item preference-options-item--selected" type="button">
-            <span class="preference-options-item-icon">💝</span>
-            <span class="preference-options-item-label">體貼熱情</span>
-          </button>
-          <button class="preference-options-item" type="button">
-            <span class="preference-options-item-icon">📚</span>
-            <span class="preference-options-item-label">優雅知性</span>
-          </button>
-          <button class="preference-options-item" type="button">
-            <span class="preference-options-item-icon">✨</span>
-            <span class="preference-options-item-label">活潑開朗</span>
-          </button>
-          <button class="preference-options-item" type="button">
-            <span class="preference-options-item-icon">🌸</span>
-            <span class="preference-options-item-label">溫柔婉約</span>
-          </button>
-          <button class="preference-options-item" type="button">
-            <span class="preference-options-item-icon">🤝</span>
-            <span class="preference-options-item-label">達到共識</span>
-          </button>
-        </div>
+          <!-- ── State 4: Pairing Success ── -->
+          <div class="pairing d-none" id="statePairing3">
+            <div class="step-indicator">
+              <div class="step-indicator-item step-indicator-item--done">
+                <div class="step-indicator-circle">
+                  <i class="bi bi-check-lg" style="font-size: 13px"></i>
+                </div>
+                <span class="step-indicator-label">驗證</span>
+              </div>
+              <div class="step-indicator-item step-indicator-item--active">
+                <div class="step-indicator-circle">2</div>
+                <span class="step-indicator-label">建立檔案</span>
+              </div>
+              <div class="step-indicator-item">
+                <div class="step-indicator-circle">3</div>
+                <span class="step-indicator-label">任務牆</span>
+              </div>
+            </div>
 
-        <!-- Custom input -->
-        <div class="form-group">
-          <label class="form-label">其他描述（選填）</label>
-          <textarea class="form-input" rows="2" placeholder="請輸入..."></textarea>
-        </div>
+            <div class="pairing-avatar-group">
+              <div class="pairing-avatar">🧑</div>
+              <div class="pairing-avatar">👩</div>
+              <div class="pairing-heart">
+                <i class="bi bi-heart-fill" style="font-size: 12px"></i>
+              </div>
+            </div>
 
-        <!-- Submit -->
-        <button class="btn-cta btn-cta--primary mt-2" onclick="showPairing(1)">
-          立即配對，靜心約妹 ♥
-        </button>
+            <h3 class="pairing-title">配對成功 🎉</h3>
+            <p class="pairing-desc">
+              你和朱粉妝相互配對成功！<br />趕快完成資料讓她更了解你
+            </p>
+
+            <a href="step3.html" class="btn-cta btn-cta--primary">
+              查看配對並完成資料 →
+            </a>
+          </div>
+        </section>
       </div>
+      <img class="deco deco-1" src="./assets/decoration-1.png" alt="" />
+      <img class="deco deco-2" src="./assets/decoration-2.png" alt="" />
+      <img class="deco deco-3" src="./assets/decoration-3.png" alt="" />
+      <img class="deco deco-4" src="./assets/decoration-4.png" alt="" />
+      <img class="deco deco-5" src="./assets/decoration-5.png" alt="" />
+      <img class="deco deco-6" src="./assets/decoration-6.png" alt="" />
+    </main>
 
-      <!-- ── State 2: Searching / Matching ── -->
-      <div class="pairing d-none" id="statePairing1">
-        <a href="#" class="btn-back mb-3" onclick="showPreference(); return false;">
-          <i class="bi bi-arrow-left"></i> 返回
-        </a>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+    <script>
+      function showPreference() {
+        document.getElementById("statePreference").classList.remove("d-none");
+        ["statePairing1", "statePairing2", "statePairing3"].forEach((id) =>
+          document.getElementById(id).classList.add("d-none"),
+        );
+      }
+      function showPairing(step) {
+        document.getElementById("statePreference").classList.add("d-none");
+        document.getElementById("statePairing1").classList.add("d-none");
+        document.getElementById("statePairing2").classList.add("d-none");
+        document.getElementById("statePairing3").classList.add("d-none");
+        document
+          .getElementById("statePairing" + step)
+          .classList.remove("d-none");
+      }
 
-        <div class="step-indicator">
-          <div class="step-indicator-item step-indicator-item--done">
-            <div class="step-indicator-circle"><i class="bi bi-check-lg" style="font-size:13px;"></i></div>
-            <span class="step-indicator-label">驗證</span>
-          </div>
-          <div class="step-indicator-item step-indicator-item--active">
-            <div class="step-indicator-circle">2</div>
-            <span class="step-indicator-label">建立檔案</span>
-          </div>
-          <div class="step-indicator-item">
-            <div class="step-indicator-circle">3</div>
-            <span class="step-indicator-label">任務牆</span>
-          </div>
-        </div>
-
-        <div class="pairing-avatar pairing-avatar--searching">👤</div>
-        <h3 class="pairing-title">心動配對中</h3>
-        <div class="pairing-dots">
-          <span></span><span></span><span></span>
-        </div>
-        <p class="pairing-desc">正在為你尋找最適合的對象<br>請稍候片刻...</p>
-        <button class="btn-cta btn-cta--primary" onclick="showPairing(2)">已找到配對 →</button>
-      </div>
-
-      <!-- ── State 3: Match Found ── -->
-      <div class="pairing d-none" id="statePairing2">
-        <div class="step-indicator">
-          <div class="step-indicator-item step-indicator-item--done">
-            <div class="step-indicator-circle"><i class="bi bi-check-lg" style="font-size:13px;"></i></div>
-            <span class="step-indicator-label">驗證</span>
-          </div>
-          <div class="step-indicator-item step-indicator-item--active">
-            <div class="step-indicator-circle">2</div>
-            <span class="step-indicator-label">建立檔案</span>
-          </div>
-          <div class="step-indicator-item">
-            <div class="step-indicator-circle">3</div>
-            <span class="step-indicator-label">任務牆</span>
-          </div>
-        </div>
-
-        <div class="pairing-avatar">🧑</div>
-        <h3 class="pairing-title">已配到人選！</h3>
-        <p class="pairing-desc">找到你的心動對象了</p>
-        <div class="pairing-tag">
-          <i class="bi bi-person-fill"></i> 朱粉妝
-        </div>
-        <button class="btn-cta btn-cta--primary" onclick="showPairing(3)">查看配對 →</button>
-      </div>
-
-      <!-- ── State 4: Pairing Success ── -->
-      <div class="pairing d-none" id="statePairing3">
-        <div class="step-indicator">
-          <div class="step-indicator-item step-indicator-item--done">
-            <div class="step-indicator-circle"><i class="bi bi-check-lg" style="font-size:13px;"></i></div>
-            <span class="step-indicator-label">驗證</span>
-          </div>
-          <div class="step-indicator-item step-indicator-item--active">
-            <div class="step-indicator-circle">2</div>
-            <span class="step-indicator-label">建立檔案</span>
-          </div>
-          <div class="step-indicator-item">
-            <div class="step-indicator-circle">3</div>
-            <span class="step-indicator-label">任務牆</span>
-          </div>
-        </div>
-
-        <div class="pairing-avatar-group">
-          <div class="pairing-avatar">🧑</div>
-          <div class="pairing-avatar">👩</div>
-          <div class="pairing-heart"><i class="bi bi-heart-fill" style="font-size:12px;"></i></div>
-        </div>
-
-        <h3 class="pairing-title">配對成功 🎉</h3>
-        <p class="pairing-desc">你和朱粉妝相互配對成功！<br>趕快完成資料讓她更了解你</p>
-
-        <a href="step3.html" class="btn-cta btn-cta--primary">
-          查看配對並完成資料 →
-        </a>
-      </div>
-
-    </section>
-  </main>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="js/main.js"></script>
-  <script>
-    function showPreference() {
-      document.getElementById('statePreference').classList.remove('d-none');
-      ['statePairing1','statePairing2','statePairing3'].forEach(id =>
-        document.getElementById(id).classList.add('d-none')
-      );
-    }
-    function showPairing(step) {
-      document.getElementById('statePreference').classList.add('d-none');
-      document.getElementById('statePairing1').classList.add('d-none');
-      document.getElementById('statePairing2').classList.add('d-none');
-      document.getElementById('statePairing3').classList.add('d-none');
-      document.getElementById('statePairing' + step).classList.remove('d-none');
-    }
-
-    // Tab switching
-    document.querySelectorAll('.preference-tabs-item').forEach(btn => {
-      btn.addEventListener('click', function() {
-        document.querySelectorAll('.preference-tabs-item').forEach(b => b.classList.remove('preference-tabs-item--active'));
-        this.classList.add('preference-tabs-item--active');
+      // Tab switching
+      document.querySelectorAll(".preference-tabs-item").forEach((btn) => {
+        btn.addEventListener("click", function () {
+          document
+            .querySelectorAll(".preference-tabs-item")
+            .forEach((b) => b.classList.remove("preference-tabs-item--active"));
+          this.classList.add("preference-tabs-item--active");
+        });
       });
-    });
 
-    // Option card toggle
-    document.querySelectorAll('.preference-options-item').forEach(card => {
-      card.addEventListener('click', function() {
-        this.classList.toggle('preference-options-item--selected');
+      // Option card toggle
+      document.querySelectorAll(".preference-options-item").forEach((card) => {
+        card.addEventListener("click", function () {
+          this.classList.toggle("preference-options-item--selected");
+        });
       });
-    });
-  </script>
-</body>
+    </script>
+  </body>
 </html>

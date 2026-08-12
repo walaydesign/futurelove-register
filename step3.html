@@ -1,292 +1,671 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-TW">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>任務牆 - 戀戀未來</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;900&display=swap" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
-</head>
-<body>
-
-  <!-- ── Navbar ── -->
-  <nav class="navbar">
-    <a class="navbar-brand-logo" href="index.html">
-      <i class="bi bi-hearts brand-heart"></i>
-      <span class="brand-text">戀戀</span>
-      <span class="brand-text-suffix">未來</span>
-    </a>
-    <div class="navbar-actions">
-      <a href="#" class="navbar-link">登入</a>
-      <span class="navbar-divider">|</span>
-      <a href="#" class="navbar-link">客服</a>
-    </div>
-  </nav>
-
-  <!-- ── Main Layout ── -->
-  <main class="register-layout">
-
-    <!-- Left: Hero Panel -->
-    <aside class="register-hero">
-      <span class="hero-deco-dot hero-deco-dot--md hero-deco-dot--pos1"></span>
-      <span class="hero-deco-dot hero-deco-dot--sm hero-deco-dot--pos2"></span>
-      <span class="hero-deco-dot hero-deco-dot--lg hero-deco-dot--pos3"></span>
-      <span class="hero-deco-dot hero-deco-dot--sm hero-deco-dot--pos4"></span>
-      <span class="hero-deco-dot hero-deco-dot--md hero-deco-dot--pos5"></span>
-
-      <div class="hero">
-        <span class="hero-badge">全臺最大約會軟體平台</span>
-        <h1 class="hero-title">解鎖幸福<br>就差這一步</h1>
-        <p class="hero-desc">
-          不管你是忙碌、沒時間為自己進行感情社交，立即加入，每月實境 <strong>500 元</strong>折扣，和心儀對象很容易見到約會的感情旅程
-        </p>
-        <div class="hero-stats">
-          <div class="hero-stat">
-            <i class="bi bi-people-fill hero-stat-icon"></i>
-            <span class="hero-stat-number">10萬+</span>
-            <span class="hero-stat-label">會員</span>
-          </div>
-          <div class="hero-stat">
-            <i class="bi bi-heart-fill hero-stat-icon"></i>
-            <span class="hero-stat-number">13,900+</span>
-          </div>
-        </div>
-        <div class="hero-benefits">
-          <div class="hero-benefit">
-            <span class="hero-benefit-icon">🛡️</span>
-            <div class="hero-benefit-title">3億媒合成功</div>
-            <div class="hero-benefit-desc">帶你找到命定對象</div>
-          </div>
-          <div class="hero-benefit">
-            <span class="hero-benefit-icon">🎁</span>
-            <div class="hero-benefit-title">免費使用</div>
-            <div class="hero-benefit-desc">500元抵用金，直接折抵消費</div>
-          </div>
-          <div class="hero-benefit">
-            <span class="hero-benefit-icon">🔒</span>
-            <div class="hero-benefit-title">安全享受</div>
-            <div class="hero-benefit-desc">保密你的身份，安全聯繫</div>
-          </div>
-        </div>
-        <div class="hero-rating">
-          <div class="hero-rating-avatars">
-            <div class="avatar-thumb">😊</div>
-            <div class="avatar-thumb">😄</div>
-            <div class="avatar-thumb">🥰</div>
-          </div>
-          <div>
-            <div class="hero-rating-stars">
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill"></i>
-            </div>
-            <div class="hero-rating-info-title">全台最好評</div>
-            <div class="hero-rating-info-desc">全台 10 萬人選擇</div>
-          </div>
-        </div>
-      </div>
-    </aside>
-
-    <!-- Right: Task Wall -->
-    <section class="register-panel">
-      <div class="task-card">
-
-        <!-- Back -->
-        <a href="step2.html" class="btn-back mb-3">
-          <i class="bi bi-arrow-left"></i> 返回
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>任務牆 - 戀戀未來</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link href="css/main.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- ── Navbar ── -->
+    <nav class="navbar">
+      <div class="container">
+        <a class="navbar-logo" href="#">
+          <img src="./assets/logo.png" alt="" />
         </a>
+        <p class="navbar-action">已有帳號？<a href="" class="">直接登入</a></p>
+      </div>
+    </nav>
 
-        <!-- Step indicator -->
-        <div class="step-indicator">
-          <div class="step-indicator-item step-indicator-item--done">
-            <div class="step-indicator-circle"><i class="bi bi-check-lg" style="font-size:13px;"></i></div>
-            <span class="step-indicator-label">驗證</span>
-          </div>
-          <div class="step-indicator-item step-indicator-item--done">
-            <div class="step-indicator-circle"><i class="bi bi-check-lg" style="font-size:13px;"></i></div>
-            <span class="step-indicator-label">建立檔案</span>
-          </div>
-          <div class="step-indicator-item step-indicator-item--active">
-            <div class="step-indicator-circle">3</div>
-            <span class="step-indicator-label">任務牆</span>
-          </div>
-        </div>
+    <!-- ── Main Layout ── -->
+    <main class="register-layout">
+      <div class="container">
+        <!-- Left: Hero Panel -->
+        <aside class="register-hero">
+          <div class="hero">
+            <!-- Platform badge -->
+            <span class="hero-badge">全台最大緣分配對平台</span>
 
-        <!-- Progress -->
-        <div class="task-progress">
-          <span class="task-progress-label">已完成 <strong>2</strong> / 5 項任務</span>
-          <div class="task-progress-bar">
-            <div class="task-progress-bar-fill" style="width: 40%;"></div>
-          </div>
-          <span class="task-progress-pct">40%</span>
-        </div>
+            <!-- Main heading -->
+            <h1 class="hero-title">解鎖幸福<br />就差這一步</h1>
 
-        <!-- ── Section 1: 基本資料 ── -->
-        <div class="task-section">
-          <div class="task-section-header">
-            <h3 class="task-section-title">基本資料</h3>
-            <span class="task-section-badge task-section-badge--required">必填</span>
-          </div>
-          <div class="task-section-body">
-            <div class="form-group">
-              <label class="form-label" for="name">姓名</label>
-              <input type="text" class="form-input" id="name" placeholder="請輸入您的姓名">
-            </div>
-            <div class="form-row">
-              <div class="form-group">
-                <label class="form-label" for="height">身高（cm）</label>
-                <input type="number" class="form-input" id="height" placeholder="165">
+            <!-- Description -->
+            <p class="hero-desc">
+              不用等待命運，讓科技為你找到靈魂伴侶。立即加入，免費獲取<span
+                class="highlight"
+              >
+                500 元</span
+              >
+              點數，和心動對象展開全新的緣分旅程。
+            </p>
+
+            <!-- Stats -->
+            <div class="hero-stats">
+              <div class="hero-stat hero-stat-primary">
+                <div class="hero-stat-icon">
+                  <img src="./assets/people.svg" alt="" />
+                </div>
+                <div class="d-flex align-items-end gap-1">
+                  <span class="hero-stat-number">10萬+</span>
+                  <span class="hero-stat-label">緣分</span>
+                </div>
               </div>
-              <div class="form-group">
-                <label class="form-label" for="dob">生日</label>
-                <input type="date" class="form-input" id="dob" value="2000-01-01">
+              <div class="hero-stat hero-stat-secondary">
+                <div class="hero-stat-icon">
+                  <img src="./assets/people.svg" alt="" />
+                </div>
+                <div class="d-flex align-items-end gap-1">
+                  <span class="hero-stat-number">13,900+</span>
+                  <span class="hero-stat-label">對</span>
+                </div>
               </div>
             </div>
-            <div class="form-group">
-              <label class="form-label" for="education">學歷</label>
-              <select class="form-input form-select" id="education">
-                <option value="" disabled selected>請選擇學歷</option>
-                <option>高中/高職</option>
-                <option>專科</option>
-                <option>大學</option>
-                <option>碩士</option>
-                <option>博士</option>
-              </select>
+
+            <!-- Benefits -->
+            <div class="hero-benefits">
+              <div class="row">
+                <div class="col-4">
+                  <div class="hero-benefit">
+                    <img
+                      class="hero-benefit-icon"
+                      src="./assets/light.svg"
+                      alt=""
+                    />
+                    <h2 class="hero-benefit-title">3 秒極速註冊</h2>
+                    <p class="hero-benefit-desc">
+                      LINE 一鍵授權<br />無需繁瑣填寫
+                    </p>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="hero-benefit">
+                    <img
+                      class="hero-benefit-icon"
+                      src="./assets/gift.svg"
+                      alt=""
+                    />
+                    <h2 class="hero-benefit-title">免費獲取 500 元點數</h2>
+                    <p class="hero-benefit-desc">
+                      可折抵線上塔羅占卜<br />與生命靈數解析
+                    </p>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="hero-benefit">
+                    <img
+                      class="hero-benefit-icon"
+                      src="./assets/safe.svg"
+                      alt=""
+                    />
+                    <h2 class="hero-benefit-title">身分安全認證機制</h2>
+                    <p class="hero-benefit-desc">
+                      實名驗證<br />保障每一段緣分的真實
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="form-group">
-              <label class="form-label" for="location">居住地</label>
-              <select class="form-input form-select" id="location">
-                <option value="" disabled selected>請選擇居住地</option>
-                <option>台北市</option>
-                <option>新北市</option>
-                <option>桃園市</option>
-                <option>台中市</option>
-                <option>台南市</option>
-                <option>高雄市</option>
-                <option>其他縣市</option>
-              </select>
-            </div>
-          </div>
-        </div>
-        <div class="task-section-divider"></div>
 
-        <!-- ── Section 2: 旅遊偏好 ── -->
-        <div class="task-section">
-          <div class="task-section-header">
-            <h3 class="task-section-title">你喜歡哪些旅遊類型之旅？</h3>
-            <span class="task-section-badge task-section-badge--optional">選填</span>
-          </div>
-          <div class="interest-tags">
-            <button class="btn-tag btn-tag--selected" type="button">音樂節</button>
-            <button class="btn-tag" type="button">藝文展覽</button>
-            <button class="btn-tag btn-tag--selected" type="button">旅遊體驗</button>
-            <button class="btn-tag" type="button">體育賽事</button>
-            <button class="btn-tag" type="button">美食之旅</button>
-            <button class="btn-tag" type="button">遊樂園</button>
-            <button class="btn-tag" type="button">文化古蹟</button>
-            <button class="btn-tag" type="button">自然景觀</button>
-            <button class="btn-tag" type="button">城市探索</button>
-            <button class="btn-tag" type="button">海島度假</button>
-            <button class="btn-tag" type="button">登山健行</button>
-            <button class="btn-tag" type="button">溫泉之旅</button>
-          </div>
-        </div>
-        <div class="task-section-divider"></div>
-
-        <!-- ── Section 3: 伴侶要求 ── -->
-        <div class="task-section">
-          <div class="task-section-header">
-            <h3 class="task-section-title">您對伴侶有哪些特定要求？</h3>
-            <span class="task-section-badge task-section-badge--required">必填</span>
-          </div>
-          <div class="interest-tags">
-            <button class="btn-tag btn-tag--selected" type="button">不抽菸</button>
-            <button class="btn-tag btn-tag--selected" type="button">不喝酒</button>
-            <button class="btn-tag" type="button">有穩定收入</button>
-            <button class="btn-tag" type="button">身高 175 以上</button>
-            <button class="btn-tag" type="button">學歷大學以上</button>
-            <button class="btn-tag" type="button">同年齡層</button>
-            <button class="btn-tag" type="button">不歡迎前任</button>
-            <button class="btn-tag" type="button">有車</button>
-            <button class="btn-tag" type="button">有房</button>
-          </div>
-        </div>
-        <div class="task-section-divider"></div>
-
-        <!-- ── Section 4: 更多資訊 ── -->
-        <div class="task-section">
-          <div class="task-section-header">
-            <h3 class="task-section-title">更多資訊</h3>
-            <span class="task-section-badge task-section-badge--optional">選填</span>
-          </div>
-          <div class="interest-tags">
-            <button class="btn-tag" type="button">早起型</button>
-            <button class="btn-tag btn-tag--selected" type="button">夜貓子</button>
-            <button class="btn-tag" type="button">運動愛好者</button>
-            <button class="btn-tag" type="button">電影迷</button>
-            <button class="btn-tag" type="button">美食控</button>
-            <button class="btn-tag" type="button">寵物愛好者</button>
-            <button class="btn-tag" type="button">INFJ</button>
-            <button class="btn-tag" type="button">ENFP</button>
-            <button class="btn-tag" type="button">居家型</button>
-          </div>
-        </div>
-        <div class="task-section-divider"></div>
-
-        <!-- ── Section 5: 密碼設定 ── -->
-        <div class="task-section">
-          <div class="task-section-header">
-            <h3 class="task-section-title">密碼設定</h3>
-            <span class="task-section-badge task-section-badge--required">必填</span>
-          </div>
-          <div class="task-section-body">
-            <div class="form-group">
-              <label class="form-label" for="taskPassword">密碼</label>
-              <input type="password" class="form-input" id="taskPassword" placeholder="請輸入密碼（8位以上）">
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="taskPasswordConfirm">再次確認密碼</label>
-              <input type="password" class="form-input" id="taskPasswordConfirm" placeholder="請再次輸入密碼">
+            <!-- Rating -->
+            <div class="hero-rating">
+              <h3>全台好評</h3>
+              <div class="hero-rating-wrapper">
+                <div class="hero-rating-item">
+                  <div class="hero-rating-avatars">
+                    <div class="hero-rating-avatar">
+                      <img src="./assets/avatar-1.jpg" alt="" />
+                    </div>
+                    <div class="hero-rating-avatar">
+                      <img src="./assets/avatar-2.jpg" alt="" />
+                    </div>
+                  </div>
+                  <div class="hero-rating-inner">
+                    <div class="hero-rating-stars">
+                      <img src="./assets/star.svg" alt="" />
+                      <img src="./assets/star.svg" alt="" />
+                      <img src="./assets/star.svg" alt="" />
+                      <img src="./assets/star.svg" alt="" />
+                      <img src="./assets/star.svg" alt="" />
+                    </div>
+                    <p>非常非常準確！</p>
+                  </div>
+                </div>
+                <div class="hero-rating-item">
+                  <div class="hero-rating-avatars">
+                    <div class="hero-rating-avatar">
+                      <img src="./assets/avatar-3.jpg" alt="" />
+                    </div>
+                    <div class="hero-rating-avatar">
+                      <img src="./assets/avatar-4.jpg" alt="" />
+                    </div>
+                  </div>
+                  <div class="hero-rating-inner">
+                    <div class="hero-rating-stars">
+                      <img src="./assets/star.svg" alt="" />
+                      <img src="./assets/star.svg" alt="" />
+                      <img src="./assets/star.svg" alt="" />
+                      <img src="./assets/star.svg" alt="" />
+                      <img src="./assets/star.svg" alt="" />
+                    </div>
+                    <p>認識了很多新朋友</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
+        </aside>
 
-        <!-- Submit -->
-        <a href="success.html" class="btn-cta btn-cta--primary mt-2">
-          進行配對，靜心 ♥
-        </a>
+        <!-- Right: Task Wall -->
+        <section class="register-panel">
+          <div class="register-card">
+            <div class="register-step">
+              <div class="row">
+                <div class="col-4">
+                  <a href="index.html" class="register-step-item">
+                    <span>1</span>
+                    <p>驗證</p>
+                  </a>
+                </div>
+                <div class="col-4">
+                  <a href="step2.html" class="register-step-item">
+                    <span>2</span>
+                    <p>建立檔案</p>
+                  </a>
+                </div>
+                <div class="col-4">
+                  <a href="" class="register-step-item active">
+                    <span>3</span>
+                    <p>任務牆</p>
+                  </a>
+                </div>
+              </div>
+            </div>
 
+            <div class="register-card-body">
+              <!-- Step indicator -->
+              <div class="step-indicator">
+                <div class="step-indicator-item step-indicator-item--done">
+                  <div class="step-indicator-circle">
+                    <i class="bi bi-check-lg" style="font-size: 13px"></i>
+                  </div>
+                  <span class="step-indicator-label">步驟一</span>
+                </div>
+                <div class="step-indicator-item step-indicator-item--done">
+                  <div class="step-indicator-circle">
+                    <i class="bi bi-check-lg" style="font-size: 13px"></i>
+                  </div>
+                  <span class="step-indicator-label">步驟二</span>
+                </div>
+                <div class="step-indicator-item step-indicator-item--active">
+                  <div class="step-indicator-circle">3</div>
+                  <span class="step-indicator-label">步驟三</span>
+                </div>
+                <div class="step-indicator-item">
+                  <div class="step-indicator-circle">4</div>
+                  <span class="step-indicator-label">步驟四</span>
+                </div>
+              </div>
+
+              <div class="d-flex align-items-center gap-2">
+                <p style="font-size: 13px">你還有哪些特別之處？</p>
+                <p class="point">+100 元</p>
+              </div>
+              <div
+                class="task-progress d-flex align-items-center justify-content-between"
+              >
+                <p class="task-progress-main">已填 0 / 5 區塊</p>
+                <p class="task-progress-point">+0 點</p>
+              </div>
+              <!-- ── Section 1: 基本資料 ── -->
+              <div class="task-section">
+                <div class="task-section-header">
+                  <h3 class="task-section-title">基本資料</h3>
+                  <div class="d-flex align-items-center gap-2">
+                    <span
+                      class="task-section-badge task-section-badge--required"
+                      >未填寫</span
+                    >
+                    <img src="./assets/arrow-down.svg" alt="" />
+                  </div>
+                </div>
+                <div class="task-section-body">
+                  <div class="form-group">
+                    <label class="form-label" for="name">姓名</label>
+                    <input
+                      type="text"
+                      class="form-input"
+                      id="name"
+                      placeholder="請輸入您的姓名"
+                    />
+                  </div>
+                  <div class="form-row">
+                    <div class="form-group">
+                      <label class="form-label" for="height">身高（cm）</label>
+                      <input
+                        type="number"
+                        class="form-input"
+                        id="height"
+                        placeholder="165"
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label" for="dob">生日</label>
+                      <input
+                        type="date"
+                        class="form-input"
+                        id="dob"
+                        value="2000-01-01"
+                      />
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="education">學歷</label>
+                    <select class="form-input form-select" id="education">
+                      <option value="" disabled selected>請選擇學歷</option>
+                      <option>高中/高職</option>
+                      <option>專科</option>
+                      <option>大學</option>
+                      <option>碩士</option>
+                      <option>博士</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="location">居住地</label>
+                    <select class="form-input form-select" id="location">
+                      <option value="" disabled selected>請選擇居住地</option>
+                      <option>台北市</option>
+                      <option>新北市</option>
+                      <option>桃園市</option>
+                      <option>台中市</option>
+                      <option>台南市</option>
+                      <option>高雄市</option>
+                      <option>其他縣市</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <div class="task-section">
+                <div class="task-section-header">
+                  <h3 class="task-section-title">你還有哪些特別之處？</h3>
+                  <!-- max:3 -->
+                  <div class="d-flex align-items-center gap-2">
+                    <span
+                      class="task-section-badge task-section-badge--required"
+                      >未填寫</span
+                    >
+                    <img src="./assets/arrow-down.svg" alt="" />
+                  </div>
+                </div>
+                <div class="task-section-body">
+                  <p>
+                    別害羞，做自己才能吸引忠於自我的新朋友。<span
+                      class="highlight"
+                      >請複選 3 個 </span
+                    >
+                  </p>
+                  <div class="interest-tags" data-max="3">
+                    <button class="btn-tag btn-tag--selected" type="button">
+                      細心體貼
+                    </button>
+                    <button class="btn-tag" type="button">溫文儒雅</button>
+                    <button class="btn-tag btn-tag--selected" type="button">
+                      善解人意
+                    </button>
+                    <button class="btn-tag" type="button">多愁善感</button>
+                    <button class="btn-tag" type="button">熱情活潑</button>
+                    <button class="btn-tag" type="button">單純率真</button>
+                    <button class="btn-tag" type="button">誠懇實在</button>
+                    <button class="btn-tag" type="button">幽默風趣</button>
+                    <button class="btn-tag" type="button">沉穩內斂</button>
+                    <button class="btn-tag" type="button">陽光運動</button>
+                    <button class="btn-tag" type="button">聰明伶俐</button>
+                    <button class="btn-tag" type="button">甜美可愛</button>
+                  </div>
+                </div>
+              </div>
+              <div class="task-section">
+                <div class="task-section-header">
+                  <h3 class="task-section-title">您在休假時都在做些什麼呢？</h3>
+                  <div class="d-flex align-items-center gap-2">
+                    <span
+                      class="task-section-badge task-section-badge--required"
+                      >未填寫</span
+                    >
+                    <img src="./assets/arrow-down.svg" alt="" />
+                  </div>
+                </div>
+                <div class="task-section-body">
+                  <p><span
+                      class="highlight"
+                      >首先請試著選擇 2 個吧！</span
+                    >
+                  </p>
+                  <div class="interest-tags" data-max="2">
+                    <button class="btn-tag btn-tag--selected" type="button">
+                      桑拿
+                    </button>
+                    <button class="btn-tag" type="button">運動</button>
+                    <button class="btn-tag btn-tag--selected" type="button">
+                      喝酒
+                    </button>
+                    <button class="btn-tag" type="button">逛美術館</button>
+                    <button class="btn-tag" type="button">逛博物館</button>
+                    <button class="btn-tag" type="button">電影</button>
+                    <button class="btn-tag" type="button">舞台劇</button>
+                    <button class="btn-tag" type="button">去唱歌</button>
+                    <button class="btn-tag" type="button">高爾夫球</button>
+                    <button class="btn-tag" type="button">看喜劇</button>
+                    <button class="btn-tag" type="button">看演唱會</button>
+                    <button class="btn-tag" type="button">逛咖啡廳</button>
+                    <button class="btn-tag" type="button">拉麵</button>
+                    <button class="btn-tag" type="button">動漫</button>
+                    <button class="btn-tag" type="button">旅行</button>
+                    <button class="btn-tag" type="button">遊戲</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="task-section">
+                <div class="task-section-header">
+                  <h3 class="task-section-title">重要價值觀</h3>
+                  <div class="d-flex align-items-center gap-2">
+                    <span
+                      class="task-section-badge task-section-badge--required"
+                      >未填寫</span
+                    >
+                    <img src="./assets/arrow-down.svg" alt="" />
+                  </div>
+                </div>
+                <div class="task-section-body">
+                  <p><span
+                      class="highlight"
+                      >請複選 3 個 </span
+                    >
+                  </p>
+                  <div class="interest-tags" data-max="3">
+                    <button class="btn-tag btn-tag--selected" type="button">
+                      追求事業成就
+                    </button>
+                    <button class="btn-tag" type="button">工作與生活平衡</button>
+                    <button class="btn-tag btn-tag--selected" type="button">
+                      希望結婚
+                    </button>
+                    <button class="btn-tag" type="button">不打算結婚</button>
+                    <button class="btn-tag" type="button">希望有小孩</button>
+                    <button class="btn-tag" type="button">不想要小孩</button>
+                    <button class="btn-tag" type="button">一夫一妻制</button>
+                    <button class="btn-tag" type="button">開放式關係</button>
+                    <button class="btn-tag" type="button">重視儀式感</button>
+                    <button class="btn-tag" type="button">希望每天都有陪伴</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="task-section">
+                <div class="task-section-header">
+                  <h3 class="task-section-title">其他資訊</h3>
+                  <div class="d-flex align-items-center gap-2">
+                    <span
+                      class="task-section-badge task-section-badge--required"
+                      >未填寫</span
+                    >
+                    <img src="./assets/arrow-down.svg" alt="" />
+                  </div>
+                </div>
+                <div class="task-section-body">
+                  <div class="form-group">
+                    <label class="form-label" for="lineid">LINE ID</label>
+                    <input
+                      type="text"
+                      class="form-input"
+                      id="lineid"
+                      placeholder="請輸入您的姓名"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="intro">自我介紹</label>
+                    <textarea
+                      class="form-input"
+                      id="intro"
+                      placeholder="請輸入"
+                    ></textarea>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="whyknow">如何知道本站</label>
+                    <select class="form-input form-select" id="whyknow">
+                      <option value="" disabled selected>請選擇</option>
+                      <option>朋友介紹</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Submit -->
+              <a href="success.html" class="btn-cta btn-cta--primary mt-2">
+                儲存特質，繼續 <img src="./assets/arrow-right.svg">
+              </a>
+              <a href="./index.html" class="btn-back">← 返回上一步</a>
+
+              <div class="get-point">
+                <p>幸福上岸進度</p>
+                <p><span class="current">350</span> / 500 元點數</p>
+              </div>
+            </div>
+            <!-- Card footer -->
+            <div class="register-card-footer">
+              <span>身分證驗證可稍後完成 ·</span>
+              <a href="#">客服支援 </a>
+              <span class="separator">·</span>
+              <span>©2026 戀戀未來</span>
+            </div>
+          </div>
+        </section>
       </div>
-    </section>
+      <img class="deco deco-1" src="./assets/decoration-1.png" alt="" />
+      <img class="deco deco-2" src="./assets/decoration-2.png" alt="" />
+      <img class="deco deco-3" src="./assets/decoration-3.png" alt="" />
+      <img class="deco deco-4" src="./assets/decoration-4.png" alt="" />
+      <img class="deco deco-5" src="./assets/decoration-5.png" alt="" />
+      <img class="deco deco-6" src="./assets/decoration-6.png" alt="" />
+    </main>
 
-  </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+    <script>
+      // ── Helpers ──────────────────────────────
+      function isSectionComplete(section) {
+        const body = section.querySelector(".task-section-body");
+        const tagsGroup = body.querySelector(".interest-tags[data-max]");
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="js/main.js"></script>
-  <script>
-    // Tag toggle
-    document.querySelectorAll('.btn-tag').forEach(tag => {
-      tag.addEventListener('click', function() {
-        this.classList.toggle('btn-tag--selected');
-        updateProgress();
+        if (tagsGroup) {
+          // Tag section: must reach data-max selections
+          const max = parseInt(tagsGroup.dataset.max, 10);
+          return tagsGroup.querySelectorAll(".btn-tag--selected").length >= max;
+        }
+
+        // Form section: every .form-input must have a value
+        const inputs = body.querySelectorAll(".form-input");
+        return [...inputs].every((el) => el.value.trim() !== "");
+      }
+
+      function updateAllProgress() {
+        const sections = document.querySelectorAll(".task-section");
+        let completed = 0;
+
+        sections.forEach((section) => {
+          const badge = section.querySelector(".task-section-badge");
+          const done = isSectionComplete(section);
+
+          if (done) {
+            completed++;
+            badge.textContent = "已填寫";
+            badge.classList.remove("task-section-badge--required");
+            badge.classList.add("task-section-badge--done");
+          } else {
+            badge.textContent = "未填寫";
+            badge.classList.add("task-section-badge--required");
+            badge.classList.remove("task-section-badge--done");
+          }
+        });
+
+        const total = sections.length;
+        document.querySelector(".task-progress-main").textContent =
+          `已填 ${completed} / ${total} 區塊`;
+        document.querySelector(".task-progress-point").textContent =
+          `+${completed * 20} 點`;
+      }
+
+      // ── Tag toggle (with max limit) ───────────
+      document.querySelectorAll(".btn-tag").forEach((tag) => {
+        tag.addEventListener("click", function () {
+          const group = this.closest(".interest-tags");
+          const max = group ? parseInt(group.dataset.max, 10) : Infinity;
+          const isSelected = this.classList.contains("btn-tag--selected");
+
+          if (isSelected) {
+            this.classList.remove("btn-tag--selected");
+          } else {
+            const currentCount = group
+              ? group.querySelectorAll(".btn-tag--selected").length
+              : 0;
+            if (currentCount < max) {
+              this.classList.add("btn-tag--selected");
+            }
+          }
+
+          if (group && max !== Infinity) {
+            const newCount = group.querySelectorAll(".btn-tag--selected").length;
+            group.classList.toggle("interest-tags--maxed", newCount >= max);
+          }
+
+          updateAllProgress();
+        });
       });
-    });
 
-    // Simple progress update demo
-    function updateProgress() {
-      const total = 5;
-      const filled = Math.min(
-        document.querySelectorAll('.btn-tag--selected').length > 0 ? 1 : 0,
-        1
-      ) + (document.getElementById('name').value ? 1 : 0) + 2;
-      const pct = Math.round((filled / total) * 100);
-      document.querySelector('.task-progress-bar-fill').style.width = pct + '%';
-      document.querySelector('.task-progress-pct').textContent = pct + '%';
-    }
-  </script>
-</body>
+      // ── Form input listeners ──────────────────
+      document.querySelectorAll(".task-section .form-input").forEach((input) => {
+        input.addEventListener("input", updateAllProgress);
+        input.addEventListener("change", updateAllProgress);
+      });
+
+      // ── Init ─────────────────────────────────
+      document.querySelectorAll(".interest-tags[data-max]").forEach((group) => {
+        const max = parseInt(group.dataset.max, 10);
+        const count = group.querySelectorAll(".btn-tag--selected").length;
+        group.classList.toggle("interest-tags--maxed", count >= max);
+      });
+
+      updateAllProgress();
+
+      // ── Photo upload ──────────────────────────
+      const PLUS_ICON = './assets/＋.svg';
+
+      function addDeleteButton(item) {
+        if (item.querySelector('.upload-photo-delete')) return;
+        const btn = document.createElement('button');
+        btn.className = 'upload-photo-delete';
+        btn.type = 'button';
+        btn.textContent = '×';
+        btn.addEventListener('click', (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          switchToDefault(item);
+          updatePhotoCounter();
+        });
+        item.appendChild(btn);
+      }
+
+      function switchToUploaded(item, imgSrc) {
+        const fileInput = item.querySelector('input[type="file"]');
+        const label = item.dataset.label || '';
+        item.innerHTML = '';
+
+        const img = document.createElement('img');
+        img.src = imgSrc;
+        img.alt = '';
+
+        const p = document.createElement('p');
+        p.textContent = label;
+
+        item.appendChild(img);
+        item.appendChild(p);
+        item.appendChild(fileInput);
+        item.classList.remove('default');
+        item.classList.add('uploaded');
+        addDeleteButton(item);
+      }
+
+      function switchToDefault(item) {
+        const fileInput = item.querySelector('input[type="file"]');
+        const label = item.dataset.label || '';
+        item.innerHTML = '';
+
+        const wrapper = document.createElement('div');
+        wrapper.className = 'upload-photo-item-wrapper';
+        const icon = document.createElement('img');
+        icon.src = PLUS_ICON;
+        icon.alt = '';
+        const p = document.createElement('p');
+        p.textContent = label;
+        wrapper.appendChild(icon);
+        wrapper.appendChild(p);
+
+        fileInput.value = '';
+        item.appendChild(wrapper);
+        item.appendChild(fileInput);
+        item.classList.remove('uploaded');
+        item.classList.add('default');
+      }
+
+      function updatePhotoCounter() {
+        const total = document.querySelectorAll('.upload-photo-item').length;
+        const uploaded = document.querySelectorAll('.upload-photo-item.uploaded').length;
+        const remaining = total - uploaded;
+        const counter = document.querySelector('.upload-photo > p');
+        if (!counter) return;
+        counter.textContent = remaining > 0
+          ? `已上傳 ${uploaded}/${total} 張，再上傳 ${remaining} 張解鎖 +50 元`
+          : `已上傳 ${uploaded}/${total} 張，所有照片已上傳！`;
+      }
+
+      document.querySelectorAll('.upload-photo-item').forEach((item) => {
+        // Store label for state restoration
+        const labelEl = item.querySelector('p');
+        item.dataset.label = labelEl ? labelEl.textContent.trim() : '';
+
+        const fileInput = item.querySelector('input[type="file"]');
+        fileInput.accept = 'image/*';
+
+        fileInput.addEventListener('change', function () {
+          if (!this.files || !this.files[0]) return;
+          const reader = new FileReader();
+          reader.onload = (e) => {
+            switchToUploaded(item, e.target.result);
+            updatePhotoCounter();
+          };
+          reader.readAsDataURL(this.files[0]);
+        });
+
+        // Add delete button to pre-existing uploaded items
+        if (item.classList.contains('uploaded')) {
+          addDeleteButton(item);
+        }
+      });
+
+      updatePhotoCounter();
+    </script>
+  </body>
 </html>

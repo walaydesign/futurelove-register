@@ -19,6 +19,14 @@ if (couponHead) {
   });
 }
 
+// ── Task section accordion ────────────────
+document.querySelectorAll('.task-section-header').forEach(header => {
+  header.addEventListener('click', () => {
+    header.classList.toggle('is-open');
+    header.nextElementSibling.classList.toggle('is-open');
+  });
+});
+
 // ── Verify code field ─────────────────────
 const btnVerify = document.querySelector('.btn-verify');
 const verifyGroup = document.querySelector('#verify')?.closest('.form-group');

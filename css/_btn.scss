@@ -152,14 +152,13 @@
 .btn-tag {
   display: inline-flex;
   align-items: center;
-  padding: 6px 16px;
+  padding: 8px 12px;
   border-radius: $r-full;
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 500;
-  font-family: $font-base;
-  background-color: $color-bg-tag;
-  color: $color-text-sub;
-  border: 1.5px solid $color-border;
+  color: $neural-2;
+  border: 1.5px solid $gray;
+  background-color: transparent;
   cursor: pointer;
   transition: $transition-base;
 
@@ -175,4 +174,37 @@
     border-color: $color-primary-light;
     font-weight: 600;
   }
+}
+
+.btn-back {
+  display: block;
+  width: fit-content;
+  color: $neural-1;
+  font-size: 11px;
+  margin: 12px auto 0;
+}
+
+// ── Block: interest-tags (max reached) ────
+// When a group has hit its selection limit,
+// unselected tags become visually disabled.
+.interest-tags--maxed {
+  .btn-tag:not(.btn-tag--selected) {
+    opacity: 0.35;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+}
+
+.btn-outline {
+  display: flex;
+  padding: 13px;
+  border-radius: 100px;
+  background-color: $white;
+  border: 1.5px solid $gray;
+  width: 100%;
+  margin-top: 24px;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 700;
+  color: #000;
 }

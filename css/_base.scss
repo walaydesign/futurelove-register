@@ -38,3 +38,33 @@ h1, h2, h3, h4, h5, h6 {
   line-height: $line-height-tight;
   color: $color-text;
 }
+
+.point {
+  padding: 2px 12px;
+  border-radius: 100px;
+  background: $gradient-5;
+  color: $borwn-6;
+  font-weight: 700;
+  font-size: 12px;
+}
+
+.get-point {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 20px;
+  border-radius: 12px;
+  background: $gradient-5;
+  margin-top: 20px;
+  p {
+    font-size: 13px;
+    font-weight: 700;
+    color: #412900;
+    margin: 0;
+    .current {
+      font-size: 16px;
+      font-weight: normal;
+      color: #8A5C00;
+    }
+  }
+}

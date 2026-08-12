@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>恭喜註冊成功 - 戀戀未來</title>
+    <title>任務牆 - 戀戀未來</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -167,35 +167,111 @@
           </div>
         </aside>
 
-        <!-- Right: Success Card -->
+        <!-- Right: Task Wall -->
         <section class="register-panel">
           <div class="register-card">
-            <div class="register-card-body">
-              <!-- Header -->
-              <div class="success-card-header">
-                <h2 class="success-card-title">恭喜註冊成功！</h2>
-                <p class="success-card-subtitle">
-                  您已成功啟動幸福上岸計畫，獲得
-                </p>
-                <h3>500 元</h3>
-                <p class="success-card-subtitle">點數已存入錢包，可全額抵用以下服務</p>
+            <div class="register-step">
+              <div class="row">
+                <div class="col-4">
+                  <a href="index.html" class="register-step-item">
+                    <span>1</span>
+                    <p>驗證</p>
+                  </a>
+                </div>
+                <div class="col-4">
+                  <a href="step2.html" class="register-step-item">
+                    <span>2</span>
+                    <p>建立檔案</p>
+                  </a>
+                </div>
+                <div class="col-4">
+                  <a href="" class="register-step-item active">
+                    <span>3</span>
+                    <p>任務牆</p>
+                  </a>
+                </div>
               </div>
-
-              <!-- Voucher -->
-              <div class="voucher">
-                <div class="voucher-label">18週年限定</div>
-                <p style="color:#54483A;font-size: 14px;font-weight: 700;margin-bottom: 12px;">線上浪漫塔羅牌預測 ＆ 生命靈數解析</p>
-                <p style="color: #96805E; font-size: 12px; margin-bottom: 4px;">使用 500 元全額折抵後</p>
-                <p style="color: #DC5589; font-size: 16px; font-weight: 700;">首場體驗價 $199（1小時）</p>
-                <a class="btn-cta btn-cta--primary mt-2">
-                立即折抵：開啟塔羅/生命靈數算命 <img src="./assets/arrow-right.svg" />
-              </a>
-              </div>
-
-              <a href="" class="btn-outline">先逛逛速配大廳</a>
-
             </div>
-              <!-- Card footer -->
+
+            <div class="register-card-body">
+              <!-- Step indicator -->
+              <div class="step-indicator">
+                <div class="step-indicator-item step-indicator-item--done">
+                  <div class="step-indicator-circle">
+                    <i class="bi bi-check-lg" style="font-size: 13px"></i>
+                  </div>
+                  <span class="step-indicator-label">步驟一</span>
+                </div>
+                <div class="step-indicator-item step-indicator-item--done">
+                  <div class="step-indicator-circle">
+                    <i class="bi bi-check-lg" style="font-size: 13px"></i>
+                  </div>
+                  <span class="step-indicator-label">步驟二</span>
+                </div>
+                <div class="step-indicator-item step-indicator-item--done">
+                  <div class="step-indicator-circle">3</div>
+                  <span class="step-indicator-label">步驟三</span>
+                </div>
+                <div class="step-indicator-item step-indicator-item--active">
+                  <div class="step-indicator-circle">4</div>
+                  <span class="step-indicator-label">步驟四</span>
+                </div>
+              </div>
+
+              <div class="d-flex align-items-center gap-2">
+                <p style="font-size: 13px">上傳3張個人照片</p>
+                <p class="point">+50 元</p>
+              </div>
+
+              <div class="upload-photo">
+                <div class="row">
+                  <div class="col-4">
+                    <div class="upload-photo-item uploaded">
+                      <img src="./assets/avatar-1.jpg" alt="" />
+                      <p>主照片</p>
+                      <input type="file" />
+                    </div>
+                  </div>
+                  <div class="col-4">
+                    <div class="upload-photo-item uploaded">
+                      <img src="./assets/avatar-2.jpg" alt="" />
+                      <p>自拍照</p>
+                      <input type="file" />
+                    </div>
+                  </div>
+                  <div class="col-4">
+                    <div class="upload-photo-item default">
+                      <div class="upload-photo-item-wrapper">
+                        <img src="./assets/＋.svg" alt="" />
+                        <p>你的生活</p>
+                      </div>
+                      <input type="file" />
+                    </div>
+                  </div>
+                </div>
+                <p>已上傳 2/3 張，再上傳 1 張解鎖 +50 元</p>
+                <div
+                  class="gap-1 d-flex align-items-center justify-content-center"
+                >
+                  <img style="width: 12px" src="./assets/bulb.svg" alt="" />
+                  <span style="color: #dc5589; font-size: 12px"
+                    >有照片的配對成功率提升<strong> 3 倍</strong></span
+                  >
+                </div>
+              </div>
+
+              <!-- Submit -->
+              <a href="success.html" class="btn-cta btn-cta--primary mt-2">
+                完成上傳 <img src="./assets/arrow-right.svg" />
+              </a>
+              <a href="./index.html" class="btn-back">← 返回上一步</a>
+
+              <div class="get-point">
+                <p>幸福上岸進度</p>
+                <p><span class="current">500</span> / 500 元點數</p>
+              </div>
+            </div>
+            <!-- Card footer -->
             <div class="register-card-footer">
               <span>身分證驗證可稍後完成 ·</span>
               <a href="#">客服支援 </a>

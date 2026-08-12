@@ -1,69 +1,48 @@
 // ── Block: success-card ───────────────────
 .success-card {
-  background: $color-bg-card;
-  border-radius: $r-xl;
-  padding: 40px 40px 36px;
-  box-shadow: $shadow-card;
-  width: 100%;
-  max-width: 460px;
-  text-align: center;
-
-  // Theme: header area
   &-header {
     margin-bottom: 24px;
-
-    .success-icon {
-      font-size: 48px;
-      display: block;
-      margin-bottom: 12px;
+    h3 {
+      text-align: center;
+    background: linear-gradient(30deg, #5e44bb 0%, #bf78be 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    font-size: 40px;
+    font-weight: 900;
+    color: transparent;
+    width: fit-content;
+    margin: 0 auto;
     }
   }
 
   &-title {
-    font-size: 24px;
-    font-weight: 900;
-    color: $color-text;
-    margin-bottom: 8px;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 4px;
+    color: $secondary-1;
+    text-align: center;
   }
 
   &-subtitle {
-    font-size: 13px;
-    color: $color-text-muted;
+    font-size: 12px;
+    color: $neural-1;
     line-height: 1.7;
+    text-align: center;
   }
 }
 
 // ── Block: voucher ────────────────────────
 .voucher {
-  background: linear-gradient(135deg, $pink-500, $pink-400);
-  border-radius: $r-xl;
-  padding: 28px 24px;
-  margin: 0 auto 24px;
-  position: relative;
-  overflow: hidden;
-  color: $color-white;
+  border-radius: 20px;
+  background: $gradient-4;
+  border: 1px solid rgba(255,255,255,0.8);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: $shadow-3;
 
-  // decorative notches (perforation effect)
-  &::before,
-  &::after {
-    content: '';
-    position: absolute;
-    width: 24px;
-    height: 24px;
-    background: $color-bg;
-    border-radius: 50%;
-    top: 50%;
-    transform: translateY(-50%);
-  }
 
-  &::before { left: -12px; }
-  &::after  { right: -12px; }
-
-  // dashed inner line
-  .voucher-line {
-    border-top: 2px dashed rgba(255, 255, 255, 0.4);
-    margin: 14px 0;
-  }
 
   // Theme: amount display
   &-amount {
@@ -82,9 +61,13 @@
 
   // Theme: label below amount
   &-label {
-    font-size: 14px;
-    opacity: 0.9;
-    font-weight: 500;
+    font-size: 12px;
+    padding: 4px 8px;
+    border-radius: 6px;
+    background: $gradient-5;
+    color: $borwn-2;
+    font-weight: 700;
+    margin-bottom: 8px;
   }
 
   // Theme: expiry info

@@ -1,59 +1,42 @@
-// ── Block: preference (Step 2) ────────────
-.preference-card {
-  background: $color-bg-card;
-  border-radius: $r-xl;
-  padding: 32px 36px;
-  box-shadow: $shadow-card;
-  width: 100%;
-  max-width: 460px;
-
-  // Theme: card header
-  &-header {
-    margin-bottom: 20px;
-  }
-
-  &-title {
-    font-size: 22px;
-    font-weight: 800;
-    color: $color-text;
-    margin-bottom: 6px;
-  }
-
-  &-desc {
-    font-size: 13px;
-    color: $color-text-muted;
-  }
-}
-
 // ── Block: preference-tabs ────────────────
 .preference-tabs {
-  display: flex;
-  gap: 6px;
-  margin-bottom: 22px;
-  background: $color-bg-input;
-  border-radius: $r-full;
-  padding: 4px;
-
-  // Theme: single tab button
+  .row {
+    margin-left: -6px;
+    margin-right: -6px;
+    > div {
+      padding-left: 6px;
+      padding-right: 6px;
+    }
+  }
   &-item {
-    flex: 1;
+    width: 100%;
     text-align: center;
-    padding: 8px 16px;
-    border-radius: $r-full;
-    font-size: 13px;
-    font-weight: 600;
-    color: $color-text-muted;
+    font-size: 14px;
+    font-weight: 700;
     cursor: pointer;
-    border: none;
-    background: transparent;
-    font-family: $font-base;
     transition: $transition-base;
+    background-color: $primary-3;
+    border: 1px solid $gray;
+    border-radius: 12px;
+    padding: 14px;
+    border-radius: 12px;
+    color: $neural-1;
+    svg {
+      path {
+        stroke: $neural-1;
+      }
+    }
 
     // Modifier: active tab
     &--active {
-      background: $color-white;
-      color: $color-primary;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+      color: $primary-1;
+      box-shadow: $shadow-4;
+      border-color: $primary-1;
+      svg {
+        path {
+          stroke: $primary-1;
+        }
+      }
     }
 
     &:hover:not(.preference-tabs-item--active) {
@@ -64,26 +47,34 @@
 
 // ── Block: preference-options ─────────────
 .preference-options {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
-  margin-bottom: 20px;
+  .row {
+    margin-left: -6px;
+    margin-right: -6px;
+    > div {
+      padding-left: 6px;
+      padding-right: 6px;
+    }
+  }
 
   // Theme: option card
   &-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    padding: 16px 10px;
-    background: $color-bg-input;
-    border: 2px solid $color-border;
-    border-radius: $r-lg;
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 700;
     cursor: pointer;
     transition: $transition-base;
-    font-family: $font-base;
-    min-height: 90px;
+    background-color: $primary-3;
+    border: 1px solid $gray;
+    border-radius: 12px;
+    padding: 14px;
+    border-radius: 12px;
+    color: $neural-1;
+    margin-bottom: 10px;
+    text-align: center;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
 
     &:hover {
       border-color: $pink-300;
@@ -92,21 +83,26 @@
 
     // Modifier: selected
     &--selected {
-      border-color: $color-primary;
-      background: $pink-100;
+      color: $primary-1;
+      box-shadow: $shadow-4;
+      border-color: $primary-1;
+      background-color: $white;
     }
 
     // Theme: icon inside option
     &-icon {
-      font-size: 28px;
-      line-height: 1;
+      width: 60px;
     }
 
     // Theme: label inside option
     &-label {
-      font-size: 13px;
+      font-size: 16px;
       font-weight: 600;
-      color: $color-text-sub;
+      color: $neural-2;
+    }
+    &-desc {
+      font-size: 11px;
+      color: $neural-1;
     }
   }
 }
@@ -223,19 +219,40 @@
       background: $pink-300;
       animation: dotBounce 1.4s ease-in-out infinite;
 
-      &:nth-child(2) { animation-delay: 0.2s; }
-      &:nth-child(3) { animation-delay: 0.4s; }
+      &:nth-child(2) {
+        animation-delay: 0.2s;
+      }
+      &:nth-child(3) {
+        animation-delay: 0.4s;
+      }
     }
   }
 }
 
 // ── Animations ────────────────────────────
 @keyframes pulsePink {
-  0%, 100% { box-shadow: 0 4px 20px rgba(0,0,0,0.1), 0 0 0 0 rgba(217,77,138,0.3); }
-  50%       { box-shadow: 0 4px 20px rgba(0,0,0,0.1), 0 0 0 16px rgba(217,77,138,0); }
+  0%,
+  100% {
+    box-shadow:
+      0 4px 20px rgba(0, 0, 0, 0.1),
+      0 0 0 0 rgba(217, 77, 138, 0.3);
+  }
+  50% {
+    box-shadow:
+      0 4px 20px rgba(0, 0, 0, 0.1),
+      0 0 0 16px rgba(217, 77, 138, 0);
+  }
 }
 
 @keyframes dotBounce {
-  0%, 80%, 100% { transform: scale(0.7); opacity: 0.5; }
-  40%           { transform: scale(1.1); opacity: 1; }
+  0%,
+  80%,
+  100% {
+    transform: scale(0.7);
+    opacity: 0.5;
+  }
+  40% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
 }

@@ -10,21 +10,41 @@
 
 // ── Block: task-section ───────────────────
 .task-section {
-  margin-bottom: 24px;
+  margin: 12px 0;
+  border-radius: 16px;
+  background-color: $white;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
 
   // Theme: section header row
   &-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 14px;
+    margin-bottom: 0;
+    cursor: pointer;
+    padding: 16px;
+    background-color: #f2e8f3;
+    user-select: none;
+
+    img {
+      transition: transform 0.3s ease;
+      width: 12px;
+    }
+
+    // Modifier: expanded state
+    &.is-open {
+      img {
+        transform: rotate(180deg);
+      }
+    }
   }
 
   // Theme: section title
   &-title {
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 700;
-    color: $color-text;
+    color: $neural-2;
     margin: 0;
   }
 
@@ -32,15 +52,15 @@
   &-badge {
     display: inline-flex;
     align-items: center;
-    padding: 2px 10px;
+    padding: 2px 8px;
     border-radius: $r-full;
-    font-size: 11px;
+    font-size: 10px;
     font-weight: 600;
 
     // Modifier: required
     &--required {
-      background: rgba(61, 194, 142, 0.12);
-      color: $color-required;
+      background: #f496a4;
+      color: $white;
     }
 
     // Modifier: optional
@@ -50,11 +70,33 @@
     }
   }
 
-  // Theme: section body
+  // Theme: section body (hidden by default, expands on click)
   &-body {
+    max-height: 0;
+    overflow: hidden;
+    transition:
+      max-height 0.35s ease,
+      padding 0.35s ease;
+    padding: 0 20px;
     display: flex;
     flex-direction: column;
     gap: 10px;
+    > p {
+      font-size: 12px;
+      color: $neural-1;
+      margin-bottom: 8px;
+      .highlight {
+        color: $primary-1;
+        font-weight: 700;
+      }
+    }
+
+    // Modifier: expanded
+    &.is-open {
+      max-height: 1000px;
+      padding-bottom: 14px;
+      padding: 20px;
+    }
   }
 
   // Separator line between sections
@@ -75,46 +117,126 @@
 
 // ── Block: task-progress ──────────────────
 .task-progress {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background: $pink-50;
-  border-radius: $r-lg;
-  padding: 12px 16px;
-  margin-top: 24px;
-  margin-bottom: 16px;
-
-  // Theme: progress label
-  &-label {
-    font-size: 13px;
-    color: $color-text-sub;
-
-    strong {
-      color: $color-primary;
-    }
+  padding-bottom: 16px;
+  border-bottom: 1px solid $gray;
+  p {
+    margin: 0;
   }
-
-  // Theme: progress bar
-  &-bar {
-    flex: 1;
-    height: 6px;
-    background: $pink-200;
-    border-radius: $r-full;
-    margin: 0 12px;
-    overflow: hidden;
-
-    &-fill {
-      height: 100%;
-      background: linear-gradient(90deg, $pink-500, $pink-400);
-      border-radius: $r-full;
-      transition: width 0.4s ease;
-    }
+  &-main {
+    margin: 0;
+    font-size: 14px;
+    color: $neural-1;
   }
-
-  // Theme: percentage text
-  &-pct {
-    font-size: 13px;
+  &-point {
+    font-size: 14px;
     font-weight: 700;
-    color: $color-primary;
+    color: $primary-1;
+  }
+}
+
+.upload-photo {
+  padding-bottom: 20px;
+  .row {
+    margin-left: -4px;
+    margin-right: -4px;
+  margin-bottom: 20px;
+    > div {
+      padding-left: 4px;
+      padding-right: 4px;
+    }
+  }
+  &-item {
+    border-radius: 12px;
+    background-color: #1a1a1a;
+    overflow: hidden;
+      position: relative;
+      width: 100%;
+      padding-bottom: 134%;
+    &.uploaded {
+      > img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        top: 0;
+        left: 0;
+      }
+
+      // Delete button (top-right corner)
+      .upload-photo-delete {
+        position: absolute;
+        top: 6px;
+        right: 6px;
+        z-index: 10;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: rgba(0, 0, 0, 0.55);
+        color: #fff;
+        border: none;
+        font-size: 14px;
+        line-height: 1;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        transition: background 0.2s;
+
+        &:hover {
+          background: rgba(0, 0, 0, 0.85);
+        }
+      }
+
+      >p {
+        position: absolute;
+        width: 100%;
+        margin: 0;
+        padding: 3px 10px;
+        text-align: center;
+        background-color: rgba(0,0,0,0.55);
+        color: $white;
+        font-size: 9px;
+        left: 0;
+        bottom: 0;
+      }
+    }
+    &.default {
+      .upload-photo-item-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        align-items: center;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        justify-content: center;
+        img {
+          width: 16px;
+
+        }
+        p {
+          font-size: 8px;
+          color: rgba(255,255,255,0.4);
+          margin: 0;
+        }
+      }
+    }
+      input {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        opacity: 0;
+      }
+  }
+  p {
+    text-align: center;
+    color: $neural-1;
+    font-size: 12px;
+    margin-bottom: 4px;
   }
 }

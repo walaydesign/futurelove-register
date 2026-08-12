@@ -20,8 +20,7 @@
 
 .deco {
   position: absolute;
-  filter: drop-shadow(0 4px 15px rgba(0, 0, 0, 0.1))
-  &-1 {
+  filter: drop-shadow(0 4px 15px rgba(0, 0, 0, 0.1)) &-1 {
     width: 8.54%;
     top: 8.13vw;
     left: 2.36vw;
@@ -53,24 +52,24 @@
   }
   @media screen and (max-width: 767px) {
     display: none;
-      &-1 {
-    width: 24%;
-  }
-  &-2 {
-    width: 18%;
-  }
-  &-3 {
-    width: 24%;
-  }
-  &-4 {
-    width: 15%;
-  }
-  &-5 {
-    width: 21%;
-  }
-  &-6 {
-    width: 27%;
-  }
+    &-1 {
+      width: 24%;
+    }
+    &-2 {
+      width: 18%;
+    }
+    &-3 {
+      width: 24%;
+    }
+    &-4 {
+      width: 15%;
+    }
+    &-5 {
+      width: 21%;
+    }
+    &-6 {
+      width: 27%;
+    }
   }
 }
 
