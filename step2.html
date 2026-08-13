@@ -168,8 +168,7 @@
         </aside>
 
         <!-- Right: Step 2 Preference Card -->
-        <section class="register-panel">
-          <!-- ── State 1: Preference selection ── -->
+        <section class="register-panel preference">
           <div class="register-card">
             <div class="register-step">
               <div class="row">
@@ -194,7 +193,7 @@
               </div>
             </div>
 
-            <div class="register-card-body">
+            <div class="register-card-body active">
               <div class="register-card-header">
                 <h2 class="register-card-title">你希望陪伴你的她是？</h2>
                 <p class="register-card-subtitle">
@@ -288,11 +287,15 @@
                 <label class="form-label" for="phone"
                   >理想伴侶型<span>*</span></label
                 >
-                <div class="preference-options">
+                <div class="preference-options preference-options-girl active">
                   <div class="row">
                     <div class="col-6">
                       <button class="preference-options-item" type="button">
-                        <img class="preference-options-item-icon" src="./assets/hat.png" alt="">
+                        <img
+                          class="preference-options-item-icon"
+                          src="./assets/hat.png"
+                          alt=""
+                        />
                         <span class="preference-options-item-label"
                           >優雅青叔</span
                         >
@@ -303,7 +306,11 @@
                     </div>
                     <div class="col-6">
                       <button class="preference-options-item" type="button">
-                        <img class="preference-options-item-icon" src="./assets/sun.png" alt="">
+                        <img
+                          class="preference-options-item-icon"
+                          src="./assets/sun.png"
+                          alt=""
+                        />
                         <span class="preference-options-item-label"
                           >陽光鄰家</span
                         >
@@ -314,7 +321,11 @@
                     </div>
                     <div class="col-6">
                       <button class="preference-options-item" type="button">
-                        <img class="preference-options-item-icon" src="./assets/wolf.png" alt="">
+                        <img
+                          class="preference-options-item-icon"
+                          src="./assets/wolf.png"
+                          alt=""
+                        />
                         <span class="preference-options-item-label"
                           >霸道狼狗</span
                         >
@@ -325,12 +336,80 @@
                     </div>
                     <div class="col-6">
                       <button class="preference-options-item" type="button">
-                        <img class="preference-options-item-icon" src="./assets/dog.png" alt="">
+                        <img
+                          class="preference-options-item-icon"
+                          src="./assets/dog.png"
+                          alt=""
+                        />
                         <span class="preference-options-item-label"
                           >溫柔奶狗</span
                         >
                         <span class="preference-options-item-desc"
                           >體貼溫和·黏人</span
+                        >
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="preference-options preference-options-boy">
+                  <div class="row">
+                    <div class="col-6">
+                      <button class="preference-options-item" type="button">
+                        <img
+                          class="preference-options-item-icon"
+                          src="./assets/glasses.png"
+                          alt=""
+                        />
+                        <span class="preference-options-item-label"
+                          >獨立知性姐</span
+                        >
+                        <span class="preference-options-item-desc"
+                          >成熟穩重·有主見</span
+                        >
+                      </button>
+                    </div>
+                    <div class="col-6">
+                      <button class="preference-options-item" type="button">
+                        <img
+                          class="preference-options-item-icon"
+                          src="./assets/sun.png"
+                          alt=""
+                        />
+                        <span class="preference-options-item-label"
+                          >陽光元氣妹</span
+                        >
+                        <span class="preference-options-item-desc"
+                          >開朗活潑·正能量</span
+                        >
+                      </button>
+                    </div>
+                    <div class="col-6">
+                      <button class="preference-options-item" type="button">
+                        <img
+                          class="preference-options-item-icon"
+                          src="./assets/sakura.png"
+                          alt=""
+                        />
+                        <span class="preference-options-item-label"
+                          >甜美賢淑型</span
+                        >
+                        <span class="preference-options-item-desc"
+                          >溫柔體貼·顧家</span
+                        >
+                      </button>
+                    </div>
+                    <div class="col-6">
+                      <button class="preference-options-item" type="button">
+                        <img
+                          class="preference-options-item-icon"
+                          src="./assets/girl.png"
+                          alt=""
+                        />
+                        <span class="preference-options-item-label"
+                          >可愛撒嬌派</span
+                        >
+                        <span class="preference-options-item-desc"
+                          >嬌俏黏人·有趣</span
                         >
                       </button>
                     </div>
@@ -350,12 +429,13 @@
                   required
                   placeholder="讓對方怎麼稱呼你？"
                 />
-                <p class="form-remark text-start">可使用英文名或任意名稱，保護真實身份</p>
+                <p class="form-remark text-start">
+                  可使用英文名或任意名稱，保護真實身份
+                </p>
               </div>
               <!-- Submit -->
               <button
                 class="btn-cta btn-cta--primary mt-2"
-                onclick="showPairing(1)"
               >
                 立即配對，找到心動對象<img
                   src="./assets/arrow-right.svg"
@@ -365,6 +445,67 @@
 
               <a href="./index.html" class="btn-back">← 返回上一步</a>
             </div>
+
+            <div class="register-card-body">
+              <div class="matching">
+                <div class="matching-animation">
+                  <div class="matching-animation-wrapper">
+                    <img src="./assets/boy-3.png" alt="" />
+                    <img src="./assets/boy-1.png" alt="" />
+                    <img class="active" src="./assets/boy-2.png" alt="" />
+                    <img src="./assets/boy-3.png" alt="" />
+                    <img src="./assets/boy-1.png" alt="" />
+                  </div>
+                </div>
+                <h3>心動匹配中</h3>
+                <p>正在為你尋找 <span class="matching-target">陽光鄰家</span>...</p>
+                <button class="btn-outline">取消匹配</button>
+              </div>
+            </div>
+
+            <div class="register-card-body">
+              <div class="matching">
+                <div class="matched">
+                  <div class="matched-wrapper">
+                  <img src="./assets/boy-1.png" alt="">
+
+                  </div>
+                </div>
+                <h3>已鎖定心動人選！</h3>
+                <p><span class="matching-target">陽光鄰家</span>· Kevin</p>
+              </div>
+            </div>
+
+            <div class="register-card-body">
+              <div class="matching">
+                <div class="matching-success">
+                  <div class="matching-success-avatar partner">
+                    <div class="matching-success-avatar-pic">
+                      <img src="./assets/boy-1.png" alt="">
+                    </div>
+                    <p>Kevin</p>
+                  </div>
+                  <div class="matching-success-avatar me">
+                    <div class="matching-success-avatar-pic">
+                      <img src="./assets/girl-1.png" alt="">
+                    </div>
+                    <p>Abby</p>
+                  </div>
+                  <img class="heart" src="./assets/heart.png" alt="">
+                </div>
+                <h4>配對成功</h4>
+                <p>已為您匹配到一位<span class="matching-target">陽光鄰家</span></p>
+                <button class="btn-cta btn-cta--primary mb-3">
+                  去找他 (4s)
+                  <img src="./assets/arrow-right.svg" alt="">
+                </button>
+                <button class="btn-outline w-100 mb-3">
+                  重新匹配
+                </button>
+                <p>剩餘速配次數 19/30</p>
+              </div>
+            </div>
+
             <!-- Card footer -->
             <div class="register-card-footer">
               <span>身分證驗證可稍後完成 ·</span>
@@ -372,116 +513,6 @@
               <span class="separator">·</span>
               <span>©2026 戀戀未來</span>
             </div>
-          </div>
-
-          <!-- ── State 2: Searching / Matching ── -->
-          <div class="pairing d-none" id="statePairing1">
-            <a
-              href="#"
-              class="btn-back mb-3"
-              onclick="
-                showPreference();
-                return false;
-              "
-            >
-              <i class="bi bi-arrow-left"></i> 返回
-            </a>
-
-            <div class="step-indicator">
-              <div class="step-indicator-item step-indicator-item--done">
-                <div class="step-indicator-circle">
-                  <i class="bi bi-check-lg" style="font-size: 13px"></i>
-                </div>
-                <span class="step-indicator-label">驗證</span>
-              </div>
-              <div class="step-indicator-item step-indicator-item--active">
-                <div class="step-indicator-circle">2</div>
-                <span class="step-indicator-label">建立檔案</span>
-              </div>
-              <div class="step-indicator-item">
-                <div class="step-indicator-circle">3</div>
-                <span class="step-indicator-label">任務牆</span>
-              </div>
-            </div>
-
-            <div class="pairing-avatar pairing-avatar--searching">👤</div>
-            <h3 class="pairing-title">心動配對中</h3>
-            <div class="pairing-dots">
-              <span></span><span></span><span></span>
-            </div>
-            <p class="pairing-desc">
-              正在為你尋找最適合的對象<br />請稍候片刻...
-            </p>
-            <button class="btn-cta btn-cta--primary" onclick="showPairing(2)">
-              已找到配對 →
-            </button>
-          </div>
-
-          <!-- ── State 3: Match Found ── -->
-          <div class="pairing d-none" id="statePairing2">
-            <div class="step-indicator">
-              <div class="step-indicator-item step-indicator-item--done">
-                <div class="step-indicator-circle">
-                  <i class="bi bi-check-lg" style="font-size: 13px"></i>
-                </div>
-                <span class="step-indicator-label">驗證</span>
-              </div>
-              <div class="step-indicator-item step-indicator-item--active">
-                <div class="step-indicator-circle">2</div>
-                <span class="step-indicator-label">建立檔案</span>
-              </div>
-              <div class="step-indicator-item">
-                <div class="step-indicator-circle">3</div>
-                <span class="step-indicator-label">任務牆</span>
-              </div>
-            </div>
-
-            <div class="pairing-avatar">🧑</div>
-            <h3 class="pairing-title">已配到人選！</h3>
-            <p class="pairing-desc">找到你的心動對象了</p>
-            <div class="pairing-tag">
-              <i class="bi bi-person-fill"></i> 朱粉妝
-            </div>
-            <button class="btn-cta btn-cta--primary" onclick="showPairing(3)">
-              查看配對 →
-            </button>
-          </div>
-
-          <!-- ── State 4: Pairing Success ── -->
-          <div class="pairing d-none" id="statePairing3">
-            <div class="step-indicator">
-              <div class="step-indicator-item step-indicator-item--done">
-                <div class="step-indicator-circle">
-                  <i class="bi bi-check-lg" style="font-size: 13px"></i>
-                </div>
-                <span class="step-indicator-label">驗證</span>
-              </div>
-              <div class="step-indicator-item step-indicator-item--active">
-                <div class="step-indicator-circle">2</div>
-                <span class="step-indicator-label">建立檔案</span>
-              </div>
-              <div class="step-indicator-item">
-                <div class="step-indicator-circle">3</div>
-                <span class="step-indicator-label">任務牆</span>
-              </div>
-            </div>
-
-            <div class="pairing-avatar-group">
-              <div class="pairing-avatar">🧑</div>
-              <div class="pairing-avatar">👩</div>
-              <div class="pairing-heart">
-                <i class="bi bi-heart-fill" style="font-size: 12px"></i>
-              </div>
-            </div>
-
-            <h3 class="pairing-title">配對成功 🎉</h3>
-            <p class="pairing-desc">
-              你和朱粉妝相互配對成功！<br />趕快完成資料讓她更了解你
-            </p>
-
-            <a href="step3.html" class="btn-cta btn-cta--primary">
-              查看配對並完成資料 →
-            </a>
           </div>
         </section>
       </div>
@@ -493,6 +524,7 @@
       <img class="deco deco-6" src="./assets/decoration-6.png" alt="" />
     </main>
 
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="./js/main.js"></script>
     <script>
@@ -513,21 +545,225 @@
       }
 
       // Tab switching
-      document.querySelectorAll(".preference-tabs-item").forEach((btn) => {
+      const genderBtns = document.querySelectorAll(".preference-tabs-item");
+      const optionsGirl = document.querySelector(".preference-options-girl");
+      const optionsBoy = document.querySelector(".preference-options-boy");
+
+      genderBtns.forEach((btn, index) => {
         btn.addEventListener("click", function () {
-          document
-            .querySelectorAll(".preference-tabs-item")
-            .forEach((b) => b.classList.remove("preference-tabs-item--active"));
+          genderBtns.forEach((b) =>
+            b.classList.remove("preference-tabs-item--active"),
+          );
           this.classList.add("preference-tabs-item--active");
+
+          // index 0 = 女生, index 1 = 男生
+          if (index === 0) {
+            optionsGirl.classList.add("active");
+            optionsBoy.classList.remove("active");
+          } else {
+            optionsBoy.classList.add("active");
+            optionsGirl.classList.remove("active");
+          }
         });
       });
 
-      // Option card toggle
+      // Option card single select
       document.querySelectorAll(".preference-options-item").forEach((card) => {
         card.addEventListener("click", function () {
-          this.classList.toggle("preference-options-item--selected");
+          const group = this.closest(".preference-options");
+          group
+            .querySelectorAll(".preference-options-item")
+            .forEach((c) =>
+              c.classList.remove("preference-options-item--selected"),
+            );
+          this.classList.add("preference-options-item--selected");
         });
       });
+
+      // ── register-card-body 切換 helper ──────────
+      const cardBodies = document.querySelectorAll(".register-card-body");
+
+      function showCardBody(index) {
+        const $cards = $(".register-panel.preference .register-card-body");
+        const $next = $cards.eq(index);
+        const $current = $cards.filter(":visible");
+        if (!$next.length || $current.is($next)) return;
+
+        $current.fadeOut(400, function () {
+          $next.fadeIn(400);
+        });
+      }
+
+      // ── 按鈕參照 ─────────────────────────────────
+      const btnPair    = cardBodies[0].querySelector(".btn-cta--primary");
+      const btnCancel  = cardBodies[1].querySelector(".btn-outline");
+      const btnGo      = cardBodies[3].querySelector(".btn-cta--primary");
+      const btnRematch = cardBodies[3].querySelector(".btn-outline");
+
+      let matchingTimer = null;
+      let goTimer = null;
+
+      // ── 去找他倒計時 ──────────────────────────────
+      function startGoCountdown() {
+        clearInterval(goTimer);
+        let sec = 5;
+        function updateBtn() {
+          btnGo.innerHTML = `去找他 (${sec}s)<img src="./assets/arrow-right.svg" alt="">`;
+        }
+        updateBtn();
+        goTimer = setInterval(() => {
+          sec--;
+          updateBtn();
+          if (sec <= 0) {
+            clearInterval(goTimer);
+            window.location.href = "./step3.html";
+          }
+        }, 1000);
+      }
+
+      // ── 匹配流程（card 1 → 2 → 3 → 倒計時） ────
+      function startMatchingFlow() {
+        clearTimeout(matchingTimer);
+        matchingTimer = setTimeout(() => {
+          showCardBody(2);
+          setTimeout(() => {
+            showCardBody(3);
+            setTimeout(startGoCountdown, 400);
+          }, 3000);
+        }, 8000);
+      }
+
+      // ── 立即配對按鈕 ─────────────────────────────
+      btnPair.addEventListener("click", () => {
+        // 取得性別（index 1 = 男生）
+        const isMale = [...genderBtns].findIndex((b) =>
+          b.classList.contains("preference-tabs-item--active")
+        ) === 1;
+
+        // 取得選取的理想伴侶型（只從目前 active 的那組讀取）
+        const selectedLabel = document.querySelector(
+          ".preference-options.active .preference-options-item--selected .preference-options-item-label"
+        );
+        const targetText = selectedLabel ? selectedLabel.textContent.trim() : "";
+
+        // 套用 matching-target 文字
+        document.querySelectorAll(".matching-target").forEach((el) => {
+          el.textContent = targetText;
+        });
+
+        // 暱稱顯示在 me 的 <p>
+        const nickname = document.getElementById("nickname").value.trim();
+        const meName = document.querySelector(".matching-success-avatar.me p");
+        if (meName && nickname) meName.textContent = nickname;
+
+        // 隨機取 1~3 的數字
+        const rand = () => Math.floor(Math.random() * 3) + 1;
+
+        // 配對對象圖片（女生配男、男生配女）
+        const partnerPrefix = isMale ? "girl" : "boy";
+        const partnerSrc = `./assets/${partnerPrefix}-${rand()}.png`;
+
+        // 自己的頭像（女生用女圖、男生用男圖）
+        const mePrefix = isMale ? "boy" : "girl";
+        const meSrc = `./assets/${mePrefix}-${rand()}.png`;
+
+        // matched-wrapper 圖片
+        const matchedImg = document.querySelector(".matched-wrapper img");
+        if (matchedImg) matchedImg.src = partnerSrc;
+
+        // 最後畫面：partner 頭像
+        const partnerPic = document.querySelector(".matching-success-avatar.partner .matching-success-avatar-pic img");
+        if (partnerPic) partnerPic.src = partnerSrc;
+
+        // 最後畫面：me 頭像
+        const mePic = document.querySelector(".matching-success-avatar.me .matching-success-avatar-pic img");
+        if (mePic) mePic.src = meSrc;
+
+        // 更換 matching-animation 圖片（男生選女圖，女生選男圖）
+        const animWrapper = document.querySelector(".matching-animation-wrapper");
+        if (animWrapper) {
+          animWrapper.querySelectorAll("img").forEach((img) => {
+            if (isMale) {
+              img.src = img.src.replace(/boy-(\d)\.png/, "girl-$1.png");
+            } else {
+              img.src = img.src.replace(/girl-(\d)\.png/, "boy-$1.png");
+            }
+          });
+        }
+
+        showCardBody(1);
+        startMatchingFlow();
+      });
+
+      // ── 取消匹配按鈕 ─────────────────────────────
+      if (btnCancel) {
+        btnCancel.addEventListener("click", () => {
+          clearTimeout(matchingTimer);
+          showCardBody(0);
+        });
+      }
+
+      // ── 去找他按鈕（立即跳轉） ───────────────────
+      if (btnGo) {
+        btnGo.addEventListener("click", () => {
+          clearInterval(goTimer);
+          window.location.href = "./step3.html";
+        });
+      }
+
+      // ── 重新匹配按鈕 ─────────────────────────────
+      if (btnRematch) {
+        btnRematch.addEventListener("click", () => {
+          clearInterval(goTimer);
+          showCardBody(1);
+          startMatchingFlow();
+        });
+      }
+
+      // ── Matching animation carousel ──────────────
+      const wrapper = document.querySelector(".matching-animation-wrapper");
+      if (wrapper) {
+        let isAnimating = false;
+
+        setInterval(() => {
+          if (isAnimating) return;
+          isAnimating = true;
+
+          const active = wrapper.querySelector("img.active");
+          if (!active) { isAnimating = false; return; }
+
+          const next = active.nextElementSibling;
+          const firstImg = wrapper.firstElementChild;
+          const shiftAmount = firstImg.offsetWidth + 24; // item width + gap
+          const activeSrc = active.src;
+          const activeAlt = active.alt;
+
+          // Step 1: trigger CSS transitions (shrink active, grow next, slide wrapper left)
+          active.classList.remove("active");
+          if (next) next.classList.add("active");
+          wrapper.style.transform = `translateX(-${shiftAmount}px)`;
+
+          // Step 2: after transition, seamlessly reset DOM
+          setTimeout(() => {
+            wrapper.style.transition = "none";
+            wrapper.style.transform = "translateX(0)";
+
+            const newImg = document.createElement("img");
+            newImg.src = activeSrc;
+            newImg.alt = activeAlt;
+            wrapper.appendChild(newImg);
+            firstImg.remove();
+
+            // Re-enable transition after browser paints the reset state
+            requestAnimationFrame(() => {
+              requestAnimationFrame(() => {
+                wrapper.style.transition = "";
+                isAnimating = false;
+              });
+            });
+          }, 350);
+        }, 1000);
+      }
     </script>
   </body>
 </html>

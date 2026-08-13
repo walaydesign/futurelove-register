@@ -68,3 +68,51 @@ h1, h2, h3, h4, h5, h6 {
     }
   }
 }
+
+.side-menu {
+  position: fixed;
+  padding: 8px;
+  background-color: $white;
+  border-radius: 12px 0 0 12px;
+  box-shadow: $shadow-2;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  a {
+    display: flex;
+    flex-direction: column;
+    width: 70px;
+    height: 70px;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    border-bottom: 1px solid $gray;
+    img {
+      width: 36px;
+    }
+    span {
+      font-size: 10px;
+      color: $neural-1;
+    }
+    &:last-child {
+      border: 0;
+    }
+  }
+  @media screen and (max-width: 767px) {
+    top: inherit;
+    transform: none;
+    bottom: 0;
+    border-radius: 12px 12px 0 0;
+    display: flex;
+    width: 100%;
+    a {
+      width: 20%;
+      height: 56px;
+      border-right: 1px solid $gray;
+      border-bottom: 0;
+      img {
+        width: 28px;
+      }
+    }
+  }
+}
