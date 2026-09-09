@@ -151,6 +151,11 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+.font-remark {
+  font-size: 13px;
+  color: #968AA7;
+}
+
 .register-layout {
   padding: 24px 0 40px;
   background-image: url(../assets/houses.png);
@@ -743,6 +748,21 @@ h1, h2, h3, h4, h5, h6 {
 .btn-cta--outline:hover {
   background: #FEF8FB;
   color: #C23D78;
+}
+
+.btn-cta--line {
+  color: #FFFFFF;
+  background: -webkit-gradient(linear, left top, right top, from(#67CC92), to(#B1D17D));
+  background: linear-gradient(to right, #67CC92 0%, #B1D17D 100%);
+}
+
+.btn-cta--line:hover {
+  background-color: #05A847;
+  color: #FFFFFF;
+  -webkit-transform: translateY(-1px);
+          transform: translateY(-1px);
+  -webkit-box-shadow: 0 4px 12px rgba(6, 199, 85, 0.35);
+          box-shadow: 0 4px 12px rgba(6, 199, 85, 0.35);
 }
 
 .btn-verify {

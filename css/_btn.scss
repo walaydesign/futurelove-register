@@ -103,6 +103,18 @@
       color: $color-primary-hover;
     }
   }
+
+  &--line {
+    color: $color-white;
+    background: linear-gradient(to right, #67CC92 0%, #B1D17D 100%);
+
+    &:hover {
+      background-color: $color-line-hover;
+      color: $color-white;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(6, 199, 85, 0.35);
+    }
+  }
 }
 
 // ── Block: btn-verify ─────────────────────
