@@ -92,6 +92,16 @@
     }
   }
 
+  &--gold {
+        background: linear-gradient(to right, #DCBFA7 0%, #F6EBCF 33%, #FFF9E9 50%, #F8EDCF 67%, #DCBFA7 100%);
+    color: $color-white;
+    box-shadow: $shadow-btn;
+    color: $borwn-6;
+    >img {
+      width: 16px;
+    }
+  }
+
   // Modifier: outline
   &--outline {
     background: transparent;
@@ -219,4 +229,16 @@
   font-size: 14px;
   font-weight: 700;
   color: #000;
+}
+
+.btn-rounded {
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  box-shadow: $shadow-btn;
+  line-height: 1.2;
+  border-radius: 50%;
 }
